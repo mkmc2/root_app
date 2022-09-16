@@ -8,6 +8,7 @@ import { FontAwesome } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 import groupRowStyling from '../styles/groupRowStyling';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 
 export const GroupHomeScreen = () => {
     const navigation = useNavigation();
@@ -74,9 +75,6 @@ export const GroupHomeScreen = () => {
                                         </View> */}
                                     </View>
                                 </View>
-                                <View style={groupRowStyling.entryIconRow}>
-                                    <FontAwesome5 name='bookmark' size={24} color="#EA594C" />
-                                </View>
                             </View>
                             <View style={groupRowStyling.groupNameRow}>
                                 <Text
@@ -93,7 +91,9 @@ export const GroupHomeScreen = () => {
                                 </Text>
                             </View>
                         </View>
-                        <View>
+                        <View style={groupRowStyling.entryIconRow}>
+                            {/* <FontAwesome5 name='bookmark' size={24} color="#EA594C" /> */}
+                            <MaterialIcons name="bookmark" size={28} color="#EA594C" />
                         </View>
                     </View>
                     <View>

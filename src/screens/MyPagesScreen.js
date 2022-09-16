@@ -26,6 +26,19 @@ export const MyPagesScreen = () => {
                 />
                 {/* Group */}
                 <GroupRow
+                    source={require('../../assets/temporaryAssets/Lulupaloza.png')}
+                    name='bookmark'
+                    groupUsername="@LulupalozaBC2022"
+                    groupName="Lulupaloza"
+                    groupLocation="Vancouver, BC"
+                    groupDate="2022"
+                    groupNumberOfUsers="3.4k"
+                    groupNumberOfMessageChains="1.7k"
+                    groupNumberOfMessagePhotos="231"
+                    groupActivityMeter="100"
+                />
+                {/* Group */}
+                <GroupRow
                     source={require('../../assets/temporaryAssets/group6.png')}
                     name='bookmark'
                     groupUsername='@WRSC_Tamarindo'
@@ -92,7 +105,7 @@ export const MyPagesScreen = () => {
 
                 {/* Duplicates */}
                 <GroupRow
-                    source={require('../../assets/temporaryAssets/group2.png')}
+                    source={require('../../assets/temporaryAssets/group7.png')}
                     name='bookmark'
                     groupUsername='@ArlingtonLibrary'
                     groupName="Arlington Public Library"
@@ -105,28 +118,41 @@ export const MyPagesScreen = () => {
                 />
                 {/* Group */}
                 <GroupRow
-                    source={require('../../assets/temporaryAssets/group3.png')}
+                    source={require('../../assets/temporaryAssets/group8.png')}
                     name='bookmark'
-                    groupUsername='@ForestVillaLane'
-                    groupName="Forest Villa Lane"
-                    groupLocation="McLean, VA"
+                    groupUsername='@TheCrossing_DC'
+                    groupName="The Crossing Apartments"
+                    groupLocation="Navy Yard, DC"
                     groupDate=""
-                    groupNumberOfUsers="89"
-                    groupNumberOfMessageChains="442"
-                    groupNumberOfMessagePhotos="386"
+                    groupNumberOfUsers="1.6k"
+                    groupNumberOfMessageChains="3.7k2"
+                    groupNumberOfMessagePhotos="1.5k"
                     groupActivityMeter="87"
                 />
                 {/* Group */}
                 <GroupRow
-                    source={require('../../assets/temporaryAssets/group4.png')}
+                    source={require('../../assets/temporaryAssets/group9.png')}
                     name='bookmark'
-                    groupUsername='@McLeanHotYoga'
-                    groupName="Hot Yoga"
-                    groupLocation="McLean, VA"
+                    groupUsername='@WashingtonCommanders'
+                    groupName="Washington Commanders"
+                    groupLocation=""
                     groupDate=""
-                    groupNumberOfUsers="243"
-                    groupNumberOfMessageChains="983"
-                    groupNumberOfMessagePhotos="1.2k"
+                    groupNumberOfUsers="32k"
+                    groupNumberOfMessageChains="12k"
+                    groupNumberOfMessagePhotos="9.4k"
+                    groupActivityMeter="65"
+                />
+                {/* Group */}
+                <GroupRow
+                    source={require('../../assets/temporaryAssets/group10.png')}
+                    name='bookmark'
+                    groupUsername='@TheBigPig_MD'
+                    groupName="The Big Pig"
+                    groupLocation="Aldephi, MD"
+                    groupDate=""
+                    groupNumberOfUsers="57"
+                    groupNumberOfMessageChains="80"
+                    groupNumberOfMessagePhotos="23"
                     groupActivityMeter="65"
                 />
             </ScrollView>

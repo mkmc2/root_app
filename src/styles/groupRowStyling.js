@@ -13,23 +13,23 @@ const groupRowStyling = StyleSheet.create({
     },
     entryRow: {
         // backgroundColor: "red",
-        flex: 1,
+        flex: 7,
         paddingLeft: 10,
         // paddingTop: 5,
     },
     entryIconView: {
         // backgroundColor: "pink",
-        // flex: 1,
+        flex: 2,
         justifyContent: "center",
         alignItems: "center",
 
     },
     entryIconRow: {
         // backgroundColor: "yellow",
-        flex: .5,
+        flex: 1,
         padding: 5,
-        justifyContent: "start",
-        alignItems: "flex-end",
+        justifyContent: "center",
+        alignItems: "center",
     },
     titleIconRow: {
         flexDirection: 'row',

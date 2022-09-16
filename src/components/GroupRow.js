@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
 import mainStyles from '../styles/mainStyles';
 import { FontAwesome5 } from '@expo/vector-icons';
+import { MaterialIcons } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
 
@@ -32,13 +33,6 @@ export const GroupRow = ({ groupName, groupLocation, groupDate, groupUsername, p
                                     style={{ fontSize: 16, color: "#4D4D4D", fontWeight: 'bold', flexWrap: "wrap", alignSelf: 'center', }}>
                                     {groupUsername}
                                 </Text>
-                                <View>
-                                    {/* Icon Row */}
-                                    <View style={styles.entryIconRow}>
-                                        <FontAwesome5 name={name} size={24} color="#EA594C" />
-                                    </View>
-                                </View>
-
                             </View>
                             <View style={mainStyles.row2}>
                                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
@@ -92,7 +86,13 @@ export const GroupRow = ({ groupName, groupLocation, groupDate, groupUsername, p
                         </Text>
                     </View>
                 </View>
-
+                <View style={styles.iconView}>
+                    {/* Icon Row */}
+                    <View style={styles.entryIconRow}>
+                        {/* <FontAwesome5 name={name} size={24} color="#EA594C" /> */}
+                        <MaterialIcons name="bookmark" size={28} color="#EA594C" />
+                    </View>
+                </View>
                 <View style={styles.bottomBorder}></View>
             </TouchableOpacity>
         </View>
@@ -116,23 +116,28 @@ const styles = StyleSheet.create({
     },
     entryRow: {
         // backgroundColor: "red",
-        flex: 5,
+        flex: 7,
     },
     entryIconView: {
         // backgroundColor: "pink",
-        // flex: 1,
+        flex: 2,
         justifyContent: "center",
-        alignItems: "flex-end",
-        padding: 5,
+        alignItems: "center",
+    },
+    iconView: {
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+
     },
     entryIconRow: {
         // backgroundColor: "yellow",
-        // flex: .5,
+        // flex: 1,
         // padding: 10,
-        justifyContent: "center",
-        alignItems: "center",
-        paddingLeft: 10,
-        paddingBottom: 5,
+        // justifyContent: "center",
+        // alignItems: "center",
+        // paddingLeft: 10,
+        // paddingBottom: 5,
     },
     // Images/Icons
     appIcon: {

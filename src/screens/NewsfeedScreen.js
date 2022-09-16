@@ -40,7 +40,7 @@ export const NewsfeedScreen = ({ }) => {
                     userName='Mike Adams'
                     postDescription="added a photo:"
                     groupUsername='@Mt.EverestSummitAug2022'
-                    postTime='20 minutes ago'
+                    postTime='13 minutes ago'
                     icon={
                         <Image
                             style={groupRowStyling.appImg50}
@@ -55,7 +55,7 @@ export const NewsfeedScreen = ({ }) => {
                     groupUsername='@McLeanRunningClub'
                     // groupLocation="McLean, VA"
                     groupDate=""
-                    postTime='1 hour ago'
+                    postTime='28 minutes ago'
                     icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                 />
                 <NewsfeedEntry
@@ -65,7 +65,7 @@ export const NewsfeedScreen = ({ }) => {
                     postDescription="posted in:"
                     groupUsername='@BarrysBootcampDupont'
                     // groupLocation="McLean VA"
-                    postTime='7 hours ago'
+                    postTime='43 minutes ago'
                     icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                 />
                 <NewsfeedEntry
@@ -75,7 +75,7 @@ export const NewsfeedScreen = ({ }) => {
                     postDescription="new group"
                     groupUsername='@ForestVillaLaneNeighborhood'
                     // groupLocation="St. George, MD"
-                    postTime='2 days ago'
+                    postTime='56 minutes ago'
                     icon={
                         <Image
                             style={groupRowStyling.appIcon}
@@ -83,60 +83,60 @@ export const NewsfeedScreen = ({ }) => {
                         />}
                 />
                 <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp1.png')}
+                    source={require('../../assets/temporaryAssets/pfp6.png')}
                     name='envelope'
-                    userName='Leslie Powell'
+                    userName='Jon Summit'
                     postDescription="post in:"
-                    groupUsername='@WashingtonPrideU18'
-                    postTime='7 minutes ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
-                />
-                <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp2.png')}
-                    name='camera'
-                    userName='Mike Adams'
-                    postDescription="added a photo:"
-                    groupUsername='@Mt.EverestSummitAug2022'
-                    // groupLocation=""
-                    // groupDate="08/2021"
-                    postTime='20 minutes ago'
-                    icon={<Image
-                        style={groupRowStyling.appImg50}
-                        source={require('../../assets/temporaryAssets/groupPhotos/PalozaPhoto7.png')}
-                    />}
-                />
-                <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp3.png')}
-                    name='envelope'
-                    userName='Sarah McKinney'
-                    postDescription="posted in:"
-                    groupUsername='@McLeanRunningClub'
-                    // groupLocation="McLean, VA"
-                    // groupDate=""
+                    groupUsername='@LulupalozaBC2022'
                     postTime='1 hour ago'
                     icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                 />
                 <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp4.png')}
+                    source={require('../../assets/temporaryAssets/pfp7.png')}
+                    name='camera'
+                    userName='Julia Charters'
+                    postDescription="added a photo:"
+                    groupUsername='@Hike_Colorado'
+                    // groupLocation=""
+                    // groupDate="08/2021"
+                    postTime='1 hour ago'
+                    icon={<Image
+                        style={groupRowStyling.appImg50}
+                        source={require('../../assets/temporaryAssets/groupPhotos/hike_pa.png')}
+                    />}
+                />
+                <NewsfeedEntry
+                    source={require('../../assets/temporaryAssets/pfp8.png')}
                     name='envelope'
-                    userName='Niema Mohammad'
+                    userName='Darren Halter'
                     postDescription="posted in:"
-                    groupUsername='@BarrysBootcampDupont'
-                    // groupLocation="McLean VA"
-                    postTime='7 hours ago'
+                    groupUsername='@WashingtonTimes'
+                    // groupLocation="McLean, VA"
+                    // groupDate=""
+                    postTime='2 hours ago'
                     icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                 />
                 <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp5.png')}
+                    source={require('../../assets/temporaryAssets/pfp9.png')}
+                    name='envelope'
+                    userName='Sergio Polchenek'
+                    postDescription="posted in:"
+                    groupUsername='@McLeanHighSchoolBand'
+                    // groupLocation="McLean VA"
+                    postTime='4 hours ago'
+                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                />
+                <NewsfeedEntry
+                    source={require('../../assets/temporaryAssets/pfp10.png')}
                     name='camera'
-                    userName='Jared Kushner'
+                    userName='Ben Lyles'
                     postDescription="added a photo:"
-                    groupUsername='@ForestVillaLaneNeighborhood'
+                    groupUsername='@Fishing_OuterBanksNC'
                     // groupLocation="St. George, MD"
-                    postTime='2 days ago'
+                    postTime='1 day ago'
                     icon={<Image
                         style={groupRowStyling.appImg50}
-                        source={require('../../assets/temporaryAssets/groupPhotos/PalozaPhoto7.png')}
+                        source={require('../../assets/temporaryAssets/groupPhotos/fishnc.png')}
                     />}
                 />
             </ScrollView>

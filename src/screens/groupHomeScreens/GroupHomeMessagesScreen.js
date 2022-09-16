@@ -74,6 +74,15 @@ export const GroupHomeMessagesScreen = () => {
                         numReplies="113"
                         activityIndicator="97"
                     />
+                    <GroupMessageEntry
+                        source={require('../../../assets/temporaryAssets/pfp6.png')}
+                        userName='Jon Summit'
+                        threadTitle="You're going to have the best time eva!"
+                        postTime='1 hr ago'
+                        numUsersPosted="34"
+                        numReplies="87"
+                        activityIndicator="97"
+                    />
                 </View>
             </ScrollView>
             <View style={groupHomePageStyling.navbarContainer}>
