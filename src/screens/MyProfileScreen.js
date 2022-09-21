@@ -12,7 +12,10 @@ export const MyProfileScreen = () => {
         <View style={mainStyles.container}>
             {/* HEADER */}
             <View style={mainScreenLayoutStyles.headerContainer}>
-                <Header HeaderTitle="My Profile" />
+                <Header
+                    HeaderTitle="My Profile"
+                    icon="envelope"
+                />
             </View>
             <View style={mainScreenLayoutStyles.mainContainer}>
                 <View style={styles.userProfileSection}>

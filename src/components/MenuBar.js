@@ -11,13 +11,15 @@ export const MenuBar = ({ menuOption1, menuOption2, menuOption3, menuButton1, me
     const [iconPressed, setIconPressed] = useState(true)
 
     return (
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: 20, }}>
-            <TouchableOpacity
-                style={styles.backgroundStyle}
-                onPress={menuButton1}
-            >
-                <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>{menuOption1}</Text>
-            </TouchableOpacity>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: 20, marginTop: 5, }}>
+            <View>
+                <TouchableOpacity
+                    style={styles.backgroundStyle}
+                    onPress={menuButton1}
+                >
+                    <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>{menuOption1}</Text>
+                </TouchableOpacity>
+            </View>
             <TouchableOpacity
                 style={styles.backgroundStyle}
                 onPress={menuButton2}
@@ -39,7 +41,15 @@ const styles = StyleSheet.create({
         backgroundColor: '#F1F1F1',
         width: 100,
         borderRadius: 5,
-    }
+    },
+    pressedButton: {
+        // backgroundColor: '#4D4D4D',
+        // color: '#F1F1F1',
+        // width: 100,
+        // borderRadius: 5,
+        opacity: .5,
+    },
+
 })
 
 export default MenuBar;

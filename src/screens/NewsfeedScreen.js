@@ -15,7 +15,10 @@ export const NewsfeedScreen = ({ }) => {
         <View style={mainStyles.container}>
             {/* HEADER */}
             <View style={mainScreenLayoutStyles.headerContainer}>
-                <Header HeaderTitle="Newsfeed" />
+                <Header
+                    HeaderTitle="Newsfeed"
+                    icon="search"
+                />
             </View>
             <ScrollView style={mainScreenLayoutStyles.mainContainer}>
                 <MenuBar

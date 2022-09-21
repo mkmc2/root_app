@@ -1,9 +1,8 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback } from 'react-native';
+import { Text, View, Image, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import mainStyles from '../styles/mainStyles';
 import signinStyles from '../styles/signinStyles';
 import { FontAwesome5 } from '@expo/vector-icons';
-import { Keyboard } from 'react-native'
 
 export const SearchBarInput = ({ }) => {
     return (

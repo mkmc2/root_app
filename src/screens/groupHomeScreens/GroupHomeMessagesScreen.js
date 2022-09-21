@@ -14,6 +14,7 @@ import groupRowStyling from '../../styles/groupRowStyling';
 import IconMenuBar from '../../components/IconMenuBar';
 import groupHomePageStyling from '../../styles/groupHomePageStyling';
 import MenuBar from '../../components/MenuBar';
+import FilterMenu from '../../components/FilterMenu';
 
 export const GroupHomeMessagesScreen = () => {
     const navigation = useNavigation();
@@ -36,9 +37,18 @@ export const GroupHomeMessagesScreen = () => {
                         menuButton2={() => navigation.navigate('GroupHomeMessages', console.log("Messages button pressed"))}
                         menuButton3={() => navigation.navigate('GroupHomePhotos', console.log("Photos button pressed"))}
                     />
+                    <FilterMenu
+                        filterButton1="Recent"
+                        filterButton2="Popular"
+                        filterButton3="Pinned"
+                        filterButton1route={() => (console.log("Recent button pressed"))}
+                        filterButton2route={() => (console.log("Popular button pressed"))}
+                        filterButton3route={() => (console.log("Pined button pressed"))}
+                    />
                 </View>
                 <View>
                     <GroupMessageEntry
+                        goToMessageThread={() => navigation.navigate('GroupHomeSubMessage', console.log("Go to message pressed"))}
                         source={require('../../../assets/temporaryAssets/pfp1.png')}
                         userName='Leslie Powell'
                         threadTitle='What to bring???'
@@ -46,8 +56,13 @@ export const GroupHomeMessagesScreen = () => {
                         numUsersPosted="9"
                         numReplies="28"
                         activityIndicator="98"
+                        likesCount="67"
+                        dislikesCount="12"
+                        numOfPins="59"
+                        name="bookmark"
                     />
                     <GroupMessageEntry
+                        goToMessageThread={() => navigation.navigate('GroupHomeSubMessage', console.log("Go to message pressed"))}
                         source={require('../../../assets/temporaryAssets/pfp2.png')}
                         userName='Ben Meirowitz'
                         threadTitle='Where is the best place to camp on the grounds?'
@@ -55,17 +70,27 @@ export const GroupHomeMessagesScreen = () => {
                         numUsersPosted="16"
                         numReplies="5"
                         activityIndicator="67"
+                        likesCount="12"
+                        dislikesCount="1"
+                        numOfPins="18"
+                        name="bookmark-border"
                     />
                     <GroupMessageEntry
-                        source={require('../../../assets/temporaryAssets/pfp4.png')}
-                        userName='Lucy Mohammad'
+                        goToMessageThread={() => navigation.navigate('GroupHomeSubMessage', console.log("Go to message pressed"))}
+                        source={require('../../../assets/temporaryAssets/pfp8.png')}
+                        userName='Darren Halter'
                         threadTitle='Are bathrooms ever a concern?'
                         postTime='27 minutes ago'
                         numUsersPosted="32"
                         numReplies="17"
                         activityIndicator="73"
+                        likesCount="132"
+                        dislikesCount="31"
+                        numOfPins="12"
+                        name="bookmark-border"
                     />
                     <GroupMessageEntry
+                        goToMessageThread={() => navigation.navigate('GroupHomeSubMessage', console.log("Go to message pressed"))}
                         source={require('../../../assets/temporaryAssets/pfp3.png')}
                         userName='Noor Ward'
                         threadTitle='My suggestions from experience!'
@@ -73,8 +98,13 @@ export const GroupHomeMessagesScreen = () => {
                         numUsersPosted="71"
                         numReplies="113"
                         activityIndicator="97"
+                        likesCount="100"
+                        dislikesCount="97"
+                        numOfPins="18"
+                        name="bookmark-border"
                     />
                     <GroupMessageEntry
+                        goToMessageThread={() => navigation.navigate('GroupHomeSubMessage', console.log("Go to message pressed"))}
                         source={require('../../../assets/temporaryAssets/pfp6.png')}
                         userName='Jon Summit'
                         threadTitle="You're going to have the best time eva!"
@@ -82,6 +112,10 @@ export const GroupHomeMessagesScreen = () => {
                         numUsersPosted="34"
                         numReplies="87"
                         activityIndicator="97"
+                        likesCount="100"
+                        dislikesCount="12"
+                        numOfPins="44"
+                        name="bookmark"
                     />
                 </View>
             </ScrollView>

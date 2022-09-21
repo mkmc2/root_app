@@ -1,15 +1,24 @@
 import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity } from 'react-native';
+
+// Styling
 import mainStyles from '../styles/mainStyles';
-import { FontAwesome5 } from '@expo/vector-icons';
 import groupRowStyling from '../styles/groupRowStyling';
+
+//Other Imports
+import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 
-export const GroupMessageEntry = ({ userName, threadTitle, postTime, source, name, icon, numUsersPosted, numReplies, activityIndicator }) => {
+export const GroupMessageEntry = ({ userName, threadTitle, postTime, source, name, icon,
+    numUsersPosted, numReplies, activityIndicator, goToMessageThread, likesCount, dislikesCount,
+    numOfPins }) => {
     return (
         <View style={styles.rowLineDivider}>
             <View>
-                <TouchableOpacity style={styles.entrySection}>
+                <TouchableOpacity
+                    style={styles.entrySection}
+                    onPress={goToMessageThread}
+                >
                     {/* Icon Row */}
                     <View style={styles.entryIconView}>
                         <Image
@@ -54,31 +63,42 @@ export const GroupMessageEntry = ({ userName, threadTitle, postTime, source, nam
                     {/* Icon Row */}
                     <View style={styles.entryIconRow}>
                         {/* <FontAwesome5 name={icon} size={24} color="#EA594C" /> */}
-                        <FontAwesome name="arrow-right" size={22} color="red" style={{ paddingLeft: 5 }} />
+                        <FontAwesome name="arrow-right" size={22} color="#EA594C" style={{ paddingLeft: 5 }} />
                     </View>
                     {/* Bottom Icon Row */}
                 </TouchableOpacity>
                 <View style={styles.messageContentRow}>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, paddingHorizontal: 10, }}>
+                    {/* <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 5, paddingHorizontal: 10, }}>
                         <Image
                             source={require('../../assets/temporaryAssets/ProfileIconThick.png')}
                             style={{ height: 25, width: 25, }}
                         />
                         <Text style={groupRowStyling.iconSubText}>{numUsersPosted}</Text>
+                    </View> */}
+                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 5, paddingHorizontal: 10, }}>
+                        <Image
+                            source={require('../../assets/icons/thumbsUp.png')}
+                            style={{ height: 25, width: 25, }}
+                        />
+                        <Text style={groupRowStyling.iconSubText}>{likesCount}</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, paddingHorizontal: 10, }}>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 5, paddingHorizontal: 10, }}>
+                        <Image
+                            source={require('../../assets/icons/thumbsDown.png')}
+                            style={{ height: 25, width: 25, }}
+                        />
+                        <Text style={groupRowStyling.iconSubText}>{dislikesCount}</Text>
+                    </View>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 5, paddingHorizontal: 10, }}>
                         <Image
                             source={require('../../assets/icons/ReplyIcon.png')}
                             style={{ height: 25, width: 25, }}
                         />
                         <Text style={groupRowStyling.iconSubText}>{numReplies}</Text>
                     </View>
-                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, paddingHorizontal: 10, }}>
-                        <Image
-                            source={require('../../assets/temporaryAssets/heartBeat.png')}
-                            style={{ height: 25, width: 25, }}
-                        />
-                        <Text style={groupRowStyling.iconSubText}>{activityIndicator}</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 5, paddingHorizontal: 10, }}>
+                        <MaterialIcons name={name} size={24} color="#4d4d4d" />
+                        <Text style={groupRowStyling.iconSubText}>{numOfPins}</Text>
                     </View>
                 </View>
             </View>

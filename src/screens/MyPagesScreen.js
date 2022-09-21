@@ -14,7 +14,10 @@ export const MyPagesScreen = () => {
         <View style={mainStyles.container}>
             {/* HEADER */}
             <View style={mainScreenLayoutStyles.headerContainer}>
-                <Header HeaderTitle="My Groups" />
+                <Header
+                    HeaderTitle="My Groups"
+                    icon="search"
+                />
             </View>
             {/* <IconMenuBar /> */}
             <ScrollView style={mainScreenLayoutStyles.mainContainer}>

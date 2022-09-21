@@ -52,7 +52,7 @@ export const UserNameScreen = ({ }) => {
                         onPress={() => navigation.navigate('Newsfeed')}
                     >
                         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Text style={mainStyles.whiteButtonText}>next</Text>
+                            <Text style={mainStyles.whiteButtonText}>finish</Text>
                             <FontAwesome name="arrow-right" size={22} color="white" style={{ paddingLeft: 5 }} />
                         </View>
                     </TouchableOpacity>

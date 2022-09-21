@@ -7,7 +7,7 @@
     "icon": "./assets/RootIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/splash.png",
+      "image": "./root/assets/RootIcon.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -18,7 +18,9 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": false,
+      "bundleIdentifier": "com.root.application",
+      "buildNumber": "1.0.0"
     },
     "android": {
       "adaptiveIcon": {

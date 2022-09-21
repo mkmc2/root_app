@@ -14,6 +14,7 @@ import DiscoverGroups from '../components/DiscoverGroups';
 import GroupHomeHeader from '../components/GroupHomeHeader';
 import MenuBar from '../components/MenuBar';
 import GroupInfoBox from '../components/GroupInfoBox';
+import FilterMenu from '../components/FilterMenu';
 
 export const DiscoverScreen = () => {
     return (
@@ -22,17 +23,33 @@ export const DiscoverScreen = () => {
         >
             {/* HEADER */}
             <View style={mainScreenLayoutStyles.headerContainer}>
-                <Header HeaderTitle="Discover" />
+                <Header
+                    HeaderTitle="Discover"
+                    icon="search"
+                />
             </View>
             <ScrollView style={mainScreenLayoutStyles.mainContainer}>
-                <SearchBarInput />
                 {/* <MenuBar
                     menuOption1="Suggested"
                     menuOption2="Popular"
                     menuOption3="Trending"
                 /> */}
-                <ScrollView style={[styles.groupRowView, { backgroundColor: '#FFFFFF', marginHorizontal: -10, height: 200, }]}>
-                    <View style={{ padding: 5, }}>
+                <SearchBarInput />
+                <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', marginHorizontal: -10, }]}>
+                    <MenuBar
+                        menuOption1="Suggested"
+                        menuOption2="Popular"
+                        menuOption3="Trending"
+                    />
+                    <FilterMenu
+                        filterButton1="Recent"
+                        filterButton2="Popular"
+                        filterButton3="Pinned"
+                        filterButton1route={() => (console.log("Recent button pressed"))}
+                        filterButton2route={() => (console.log("Popular button pressed"))}
+                        filterButton3route={() => (console.log("Pined button pressed"))}
+                    />
+                    <ScrollView style={{ paddingVertical: 5, paddingHorizontal: 10, }}>
                         {/* <SearchBarInput /> */}
                         <View style={{ paddingVertical: 5 }}>
                             <GroupShortRow
@@ -74,22 +91,77 @@ export const DiscoverScreen = () => {
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group2.png')}
                                 groupUsername='@WashingtonPride_u18'
-                                groupName="Test Group Name"
-                                groupLocation="Arlington, VA"
-                                groupDate=""
+                                groupName="Washington Pride U18"
+                                groupLocation="Rockville, MD"
+                                groupDate="22-23"
                                 groupNumberOfUsers="1.3k"
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
                             />
                         </View>
-                    </View>
-                </ScrollView>
-                <MenuBar
-                    menuOption1="Suggested"
-                    menuOption2="Popular"
-                    menuOption3="Trending"
-                />
-                <View style={styles.searchContainer}>
+                        <View style={{ paddingVertical: 5 }}>
+                            <GroupShortRow
+                                source={require('../../assets/temporaryAssets/group4.png')}
+                                groupUsername='@McLeanHotYoga'
+                                groupName="McLean Hot Yoga"
+                                groupLocation="McLean, VA"
+                                groupDate=""
+                                groupNumberOfUsers="458"
+                                groupNumberOfMessageChains="397"
+                                groupNumberOfMessagePhotos="60"
+                            />
+                        </View>
+                        <View style={{ paddingVertical: 5 }}>
+                            <GroupShortRow
+                                source={require('../../assets/temporaryAssets/group7.png')}
+                                groupUsername='@4Runner4thGen'
+                                groupName="Toyota 4Runner 4th Gen"
+                                groupLocation=""
+                                groupDate=""
+                                groupNumberOfUsers="8.9k"
+                                groupNumberOfMessageChains="5.2k"
+                                groupNumberOfMessagePhotos="1.5k"
+                            />
+                        </View>
+                        <View style={{ paddingVertical: 5 }}>
+                            <GroupShortRow
+                                source={require('../../assets/temporaryAssets/group8.png')}
+                                groupUsername='@TheCrossing_DC'
+                                groupName="The Crossing Apartments"
+                                groupLocation="Navy Yard, Washington, DC"
+                                groupDate=""
+                                groupNumberOfUsers="7.2k"
+                                groupNumberOfMessageChains="1.9k"
+                                groupNumberOfMessagePhotos="571"
+                            />
+                        </View>
+                        <View style={{ paddingVertical: 5 }}>
+                            <GroupShortRow
+                                source={require('../../assets/temporaryAssets/group9.png')}
+                                groupUsername='@Commanders'
+                                groupName="Washington Commanders Football Team"
+                                groupLocation=""
+                                groupDate=""
+                                groupNumberOfUsers="122k"
+                                groupNumberOfMessageChains="12k"
+                                groupNumberOfMessagePhotos="9.3k"
+                            />
+                        </View>
+                        <View style={{ paddingVertical: 5 }}>
+                            <GroupShortRow
+                                source={require('../../assets/temporaryAssets/group10.png')}
+                                groupUsername='@BackYardBBQ'
+                                groupName="Backyard Bbq"
+                                groupLocation="Annapolis, MD"
+                                groupDate=""
+                                groupNumberOfUsers="211"
+                                groupNumberOfMessageChains="98"
+                                groupNumberOfMessagePhotos="18"
+                            />
+                        </View>
+                    </ScrollView>
+                </View>
+                {/* <View style={styles.searchContainer}>
                     <Text style={mainStyles.mdBlueText}>Groups</Text>
                     <View style={[styles.backgroundStyle, { flexDirection: 'row', flexWrap: 'wrap' }]}>
                         <View style={{ padding: 5, }}>
@@ -139,13 +211,13 @@ export const DiscoverScreen = () => {
                                 <Text style={[mainStyles.mdGrayText, { fontSize: 14, padding: 2, }]}>A location will be suggested when a Category is selected</Text>
                             </TouchableOpacity>
                         </View>
-                        {/* <View style={{ padding: 5, }}>
+                        <View style={{ padding: 5, }}>
                             <TouchableOpacity
                                 style={{ justifyContent: 'flex-start', padding: 2, flexDirection: 'row', borderWidth: 2, borderColor: "#FDBA02", borderRadius: 10, }}
                             >
                                 <Text style={[mainStyles.mdYellowText, { fontSize: 14, padding: 2, }]}>Navy Yard, DC</Text>
                             </TouchableOpacity>
-                        </View> */}
+                        </View>
                     </View>
                 </View>
                 <View style={styles.searchContainer}>
@@ -158,40 +230,16 @@ export const DiscoverScreen = () => {
                                 <Text style={[mainStyles.mdGrayText, { fontSize: 14, padding: 2, }]}>A Date will be suggested when a Category is selected</Text>
                             </TouchableOpacity>
                         </View>
-                        {/* <View style={{ padding: 5, }}>
+                        <View style={{ padding: 5, }}>
                             <TouchableOpacity
                                 style={{ justifyContent: 'flex-start', padding: 2, flexDirection: 'row', borderWidth: 2, borderColor: "#EA594C", borderRadius: 10, }}
                             >
                                 <Text style={[mainStyles.mdRedText, { fontSize: 14, padding: 2, }]}>Navy Yard, DC</Text>
                             </TouchableOpacity>
-                        </View> */}
+                        </View>
                     </View>
-                </View>
+                </View> */}
                 {/* <GroupHomeHeader /> */}
-                <View style={{}}>
-                    {/* <GroupInfoBox
-                        source={require('../../assets/temporaryAssets/Lulupaloza.png')}
-                        groupUsername="@LulupalozaBC2022"
-                        groupName="Lulupaloza"
-                        groupLocation="Vancouver, BC"
-                        groupDate="2022"
-                        userIndicator="971"
-                        photoIndicator="457"
-                        messagesIndicator="1,553"
-                        activityIndicator="98"
-                    /> */}
-                    {/* <GroupInfoBox
-                        source={require('../../assets/temporaryAssets/Lulupaloza.png')}
-                        groupUsername="@LulupalozaVancouver2022"
-                        groupName="Lulupaloza"
-                        groupLocation="Vancouver, BC"
-                        groupDate="2022"
-                        userIndicator="971"
-                        photoIndicator="457"
-                        messagesIndicator="1,553"
-                        activityIndicator="98"
-                    /> */}
-                </View>
             </ScrollView>
             <View style={mainScreenLayoutStyles.navbarContainer}>
                 <NavBar />
@@ -224,8 +272,8 @@ const styles = StyleSheet.create({
     groupRowView: {
         // borderTopWidth: 1,
         // borderTopColor: "#4D4D4D",
-        borderBottomWidth: 1,
-        borderBottomColor: "#4D4D4D",
+        // borderBottomWidth: 1,
+        // borderBottomColor: "#4D4D4D",
     },
 })
 

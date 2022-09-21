@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import mainStyles from '../styles/mainStyles';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-export const Header = ({ HeaderTitle }) => {
+export const Header = ({ HeaderTitle, icon }) => {
     const navigation = useNavigation();
 
     return (
@@ -20,7 +20,9 @@ export const Header = ({ HeaderTitle }) => {
                         source={require('../../assets/SearchIcon.png')}
                         style={mainStyles.appIcon}
                     /> */}
-                    <FontAwesome5 name="search" size={28} color="#4D4D4D" />
+                    <View>
+                        <FontAwesome5 name={icon} size={28} color="#4D4D4D" />
+                    </View>
                 </TouchableOpacity>
             </View>
         </View>

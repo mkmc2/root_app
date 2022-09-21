@@ -14,7 +14,10 @@ import mainScreenLayoutStyles from '../../styles/mainScreenLayoutStyle';
 import groupRowStyling from '../../styles/groupRowStyling';
 import IconMenuBar from '../../components/IconMenuBar';
 import groupHomePageStyling from '../../styles/groupHomePageStyling';
+
+// Component Imports
 import MenuBar from '../../components/MenuBar';
+import FilterMenu from '../../components/FilterMenu';
 
 export const GroupHomePhotosScreen = () => {
     const navigation = useNavigation();
@@ -37,8 +40,16 @@ export const GroupHomePhotosScreen = () => {
                         menuButton2={() => navigation.navigate('GroupHomeMessages', console.log("Messages button pressed"))}
                         menuButton3={() => navigation.navigate('GroupHomePhotos', console.log("Photos button pressed"))}
                     />
+                    <FilterMenu
+                        filterButton1="Recent"
+                        filterButton2="Popular"
+                        filterButton3="Pinned"
+                        filterButton1route={() => (console.log("Recent button pressed"))}
+                        filterButton2route={() => (console.log("Popular button pressed"))}
+                        filterButton3route={() => (console.log("Pined button pressed"))}
+                    />
                 </View>
-                <View>
+                <View style={{ paddingTop: 10, }}>
                     <GroupPhotoPage
                         source1={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto1.png')}
                         source2={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto2.png')}

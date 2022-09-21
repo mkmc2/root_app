@@ -14,7 +14,10 @@ import mainScreenLayoutStyles from '../../styles/mainScreenLayoutStyle';
 import groupRowStyling from '../../styles/groupRowStyling';
 import IconMenuBar from '../../components/IconMenuBar';
 import groupHomePageStyling from '../../styles/groupHomePageStyling';
+
+// Components
 import MenuBar from '../../components/MenuBar';
+import FilterMenu from '../../components/FilterMenu';
 
 export const GroupHomeScreen = () => {
     const navigation = useNavigation();
@@ -38,13 +41,21 @@ export const GroupHomeScreen = () => {
                             menuButton2={() => navigation.navigate('GroupHomeMessages', console.log("Messages button pressed"))}
                             menuButton3={() => navigation.navigate('GroupHomePhotos', console.log("Photos button pressed"))}
                         />
+                        <FilterMenu
+                            filterButton1="Recent"
+                            filterButton2="Popular"
+                            filterButton3="Trending"
+                            filterButton1route={() => (console.log("Newsfeed Recent button pressed"))}
+                            filterButton2route={() => (console.log("Newsfeed Popular button pressed"))}
+                            filterButton3route={() => (console.log("Newfeed Trending button pressed"))}
+                        />
                     </View>
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp1.png')}
                         name='envelope'
                         userName='Leslie Powell'
                         postTitle="What to bring???"
-                        postTime='7 mins ago'
+                        postTime='3 mins ago'
                         postDescription='posted in:'
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
@@ -72,64 +83,64 @@ export const GroupHomeScreen = () => {
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp4.png')}
+                        source={require('../../../assets/temporaryAssets/pfp6.png')}
                         name='envelope'
-                        userName='Jenna McDonald'
+                        userName='Jon Summit'
                         postTitle="Added a photo"
-                        postTime='57 mins ago'
+                        postTime='41 mins ago'
                         postDescription='added a photo:'
                         icon={<Image
                             style={styles.appIcon}
-                            source={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto7.png')}
+                            source={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto5.png')}
                         />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp5.png')}
+                        source={require('../../../assets/temporaryAssets/pfp12.png')}
                         name='envelope'
-                        userName='John Lorenzo'
+                        userName='Hans Klinger'
                         postTitle="Rain in the forecast..."
-                        postTime='2 hours ago'
+                        postTime='1 hour ago'
                         postDescription='posted in:'
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp1.png')}
+                        source={require('../../../assets/temporaryAssets/pfp11.png')}
                         name='envelope'
-                        userName='Leslie Powell'
-                        postTitle="What to bring???"
-                        postTime='7 mins ago'
+                        userName='Sammy Watkins'
+                        postTitle="Security will be strict!"
+                        postTime='1 hour ago'
                         postDescription='posted in:'
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp2.png')}
+                        source={require('../../../assets/temporaryAssets/pfp10.png')}
                         name='envelope'
-                        userName='Mike Adams'
+                        userName='Adam Sammy'
                         postTitle='Added 3 new photos'
-                        postTime='19 mins ago'
+                        postTime='2 hour ago'
                         // postDescription='added a photo:'
                         icon={
                             <Image
                                 style={styles.appIcon}
-                                source={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto1.png')}
+                                source={require('../../../assets/temporaryAssets/groupPhotos/PalozaPhoto4.png')}
                             />
                         }
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp3.png')}
+                        source={require('../../../assets/temporaryAssets/pfp9.png')}
                         name='envelope'
-                        userName='Jenna McDonald'
-                        postTitle="What kind of food should I bring?"
-                        postTime='24 mins ago'
+                        userName='Sergio Polchenek'
+                        postTitle="Anyone have an extra ticket?"
+                        postTime='3 hours ago'
                         postDescription='posted in:'
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp4.png')}
+                        source={require('../../../assets/temporaryAssets/pfp8.png')}
                         name='envelope'
-                        userName='Jenna McDonald'
+                        userName='Darren Halter'
                         postTitle="Added a photo"
-                        postTime='57 mins ago'
+                        postTime='5 hours ago'
                         postDescription='added a photo:'
                         icon={<Image
                             style={styles.appIcon}
@@ -137,11 +148,11 @@ export const GroupHomeScreen = () => {
                         />}
                     />
                     <GroupNewsfeedEntry
-                        source={require('../../../assets/temporaryAssets/pfp5.png')}
+                        source={require('../../../assets/temporaryAssets/pfp7.png')}
                         name='envelope'
-                        userName='John Lorenzo'
-                        postTitle="Rain in the forecast..."
-                        postTime='2 hours ago'
+                        userName='Kim Nelson'
+                        postTitle="Is it safe to go solo?"
+                        postTime='1 day ago'
                         postDescription='posted in:'
                         icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
                     />
