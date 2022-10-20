@@ -20,7 +20,7 @@ export const HeaderGray = ({ HeaderTitle }) => {
                         source={require('../../assets/SearchIcon.png')}
                         style={mainStyles.appIcon}
                     /> */}
-                    <FontAwesome5 name="search" size={28} color="#4D4D4D" />
+                    <FontAwesome5 name="" size={24} color="#4D4D4D" />
                 </TouchableOpacity>
             </View>
         </View>
