@@ -9,15 +9,15 @@ import reactDom from 'react-dom';
 
 export const MyProfileScreen = () => {
     return (
-        <View style={mainStyles.container}>
+        <View style={[mainStyles.container, {}]}>
             {/* HEADER */}
             <View style={mainScreenLayoutStyles.headerContainer}>
                 <Header
                     HeaderTitle="My Profile"
-                    icon="envelope"
+                    icon="comment"
                 />
             </View>
-            <View style={mainScreenLayoutStyles.mainContainer}>
+            <View style={[mainScreenLayoutStyles.mainContainer, { paddingHorizontal: 0, }]}>
                 <View style={styles.userProfileSection}>
                     <View>
                         <Image
@@ -75,7 +75,7 @@ export const MyProfileScreen = () => {
                     </View>
                 </View>
                 {/* List Section */}
-                <ScrollView>
+                <ScrollView style={styles.settingsContainer}>
                     <View style={styles.rowView}>
                         <View style={styles.rowDivider}>
                             <TouchableOpacity>
@@ -154,8 +154,8 @@ const styles = StyleSheet.create({
 
     },
     rowDivider: {
-        borderTopColor: "#707070",
-        borderTopWidth: .5,
+        borderBottomColor: "#8d8d8d",
+        borderBottomWidth: .3,
         paddingVertical: 5,
         paddingVertical: 10,
     },
@@ -170,7 +170,30 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingHorizontal: 7,
     },
+    settingsContainer: {
+        backgroundColor: "#F5F5F5",
+        // borderTopLeftRadius: 20,
+        // borderTopRightRadius: 20,
+        //Shadow
+        // shadowColor: "#000",
+        // shadowOffset: {
+        //     width: 0,
+        //     height: -3,
+        // },
+        // shadowOpacity: 0.5,
+        // shadowRadius: 12,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 5,
+    }
 })
+
 
 
 export default MyProfileScreen;

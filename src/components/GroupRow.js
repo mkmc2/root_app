@@ -101,8 +101,8 @@ export const GroupRow = ({ groupName, groupLocation, groupDate, groupUsername, p
 
 const styles = StyleSheet.create({
     rowLineDivider: {
-        borderBottomColor: "#707070",
-        borderBottomWidth: .5,
+        borderBottomColor: "#8d8d8d",
+        borderBottomWidth: .3,
     },
     entrySection: {
         // backgroundColor: "green",

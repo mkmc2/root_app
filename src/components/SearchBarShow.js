@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity, TextInput, TouchableWithoutFeedback, Keyboard } from 'react-native';
 import mainStyles from '../styles/mainStyles';
 import signinStyles from '../styles/signinStyles';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-export const SearchBarInput = ({ }) => {
+export const SearchBarShow = ({ }) => {
+
+    const [showSearchBar, setShowSearchBar] = useState(true)
+
     return (
         <TouchableWithoutFeedback
             style={styles.searchContainer}
@@ -14,7 +17,7 @@ export const SearchBarInput = ({ }) => {
                 <TextInput
                     autoCapitalize="none"
                     autoCorrect={false}
-                    style={[signinStyles.loginText, { fontSize: 18, paddingVertical: 7, }]}
+                    style={signinStyles.loginText}
                     placeholder="Search..."
                 // onChangeText={onTermChange} <- shortening code
                 // onEndEditing={onTermSubmit} <- shortening code
@@ -31,20 +34,20 @@ const styles = StyleSheet.create({
         marginTop: 5,
     },
     backgroundStyle: {
-        marginTop: 10,
+        marginTop: 15,
         // backgroundColor: '#FFFFFF',
         backgroundColor: '#F1F1F1',
-        // height: 50,
+        height: 50,
         borderRadius: 10,
-        marginHorizontal: 10,
+        marginHorizontal: 15,
         flexDirection: 'row',
     },
     inputStyle: {
         flex: 1,
-        fontSize: 12,
-        padding: 10,
+        fontSize: 18,
+        paddingHorizontal: 10,
         marginTop: 10,
     },
 })
 
-export default SearchBarInput;
+export default SearchBarShow;

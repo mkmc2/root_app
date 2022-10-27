@@ -23,7 +23,10 @@ export const CreateGroupContentScreen = () => {
             <View style={mainScreenLayoutStyles.headerContainer}>
                 <HeaderGray HeaderTitle="Create New Group" />
             </View>
-            <ScrollView style={groupRowStyling.mainContainer}>
+            <ScrollView
+                style={groupRowStyling.mainContainer}
+                scrollEnabled={false}
+            >
                 {/* <CreateGroupEntry
                     entryTitle="New Group"
                     descriptionText="This is the title of your group. Make it short and simple so others' can find it more easily."

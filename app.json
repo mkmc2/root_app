@@ -7,7 +7,7 @@
     "icon": "./assets/RootIcon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./root/assets/RootIcon.png",
+      "image": "./assets/RootIcon-Splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
@@ -29,7 +29,7 @@
       }
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/RootIcon.png"
     }
   }
 }

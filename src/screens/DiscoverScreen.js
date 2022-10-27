@@ -51,7 +51,7 @@ export const DiscoverScreen = () => {
                     />
                     <ScrollView style={{ paddingVertical: 5, paddingHorizontal: 10, }}>
                         {/* <SearchBarInput /> */}
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group6.png')}
                                 groupUsername='@WRSC_TamarindoCR'
@@ -61,9 +61,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="1.3k"
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group1.png')}
                                 groupUsername='@WashingtonPride_u18'
@@ -73,9 +74,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="117"
                                 groupNumberOfMessageChains="954"
                                 groupNumberOfMessagePhotos="583"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/Lulupaloza.png')}
                                 groupUsername='@LulupalozaBC2022'
@@ -85,9 +87,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="1.3k"
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group2.png')}
                                 groupUsername='@WashingtonPride_u18'
@@ -97,9 +100,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="1.3k"
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group4.png')}
                                 groupUsername='@McLeanHotYoga'
@@ -109,9 +113,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="458"
                                 groupNumberOfMessageChains="397"
                                 groupNumberOfMessagePhotos="60"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group7.png')}
                                 groupUsername='@4Runner4thGen'
@@ -121,9 +126,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="8.9k"
                                 groupNumberOfMessageChains="5.2k"
                                 groupNumberOfMessagePhotos="1.5k"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group8.png')}
                                 groupUsername='@TheCrossing_DC'
@@ -133,9 +139,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="7.2k"
                                 groupNumberOfMessageChains="1.9k"
                                 groupNumberOfMessagePhotos="571"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group9.png')}
                                 groupUsername='@Commanders'
@@ -145,9 +152,10 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="122k"
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="9.3k"
+                                name="bookmark-outline"
                             />
                         </View>
-                        <View style={{ paddingVertical: 5 }}>
+                        <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group10.png')}
                                 groupUsername='@BackYardBBQ'
@@ -157,6 +165,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfUsers="211"
                                 groupNumberOfMessageChains="98"
                                 groupNumberOfMessagePhotos="18"
+                                name="bookmark-outline"
                             />
                         </View>
                     </ScrollView>
@@ -274,6 +283,7 @@ const styles = StyleSheet.create({
         // borderTopColor: "#4D4D4D",
         // borderBottomWidth: 1,
         // borderBottomColor: "#4D4D4D",
+        paddingVertical: 10,
     },
 })
 

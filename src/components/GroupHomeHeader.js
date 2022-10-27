@@ -15,7 +15,9 @@ export const GroupHomeScreen = () => {
 
     return (
         <View style={mainStyles.container}>
-            <TouchableOpacity style={groupRowStyling.mainContainer}>
+            <TouchableOpacity
+                onPress={() => navigation.navigate('GroupFullScreen', console.log("Group Full Screen button pressed"))}
+                style={groupRowStyling.mainContainer}>
                 {/* <CreateGroupEntry
                     entryTitle="New Group"
                     descriptionText="This is the title of your group. Make it short and simple so others' can find it more easily."

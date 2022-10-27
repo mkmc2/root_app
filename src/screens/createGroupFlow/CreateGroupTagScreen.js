@@ -30,7 +30,10 @@ export const CreateGroupTagScreen = () => {
             <View style={mainScreenLayoutStyles.headerContainer}>
                 <HeaderGray HeaderTitle="Group Username" />
             </View>
-            <ScrollView style={groupRowStyling.mainContainer}>
+            <ScrollView
+                style={groupRowStyling.mainContainer}
+                scrollEnabled={false}
+            >
                 {/* Inputting Group Row */}
                 <View style={groupRowStyling.groupContainer}>
                     <View style={groupRowStyling.entrySection}>

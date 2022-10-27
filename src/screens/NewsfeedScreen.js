@@ -75,7 +75,7 @@ export const NewsfeedScreen = ({ }) => {
                     source={require('../../assets/temporaryAssets/pfp5.png')}
                     name='camera'
                     userName='New Group'
-                    postDescription="new group"
+                    postDescription=""
                     groupUsername='@ForestVillaLaneNeighborhood'
                     // groupLocation="St. George, MD"
                     postTime='56 minutes ago'

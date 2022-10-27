@@ -70,9 +70,9 @@ export const NewsfeedEntry = ({ userName, groupUsername, postTime, source, name,
 
 const styles = StyleSheet.create({
     rowLineDivider: {
-        borderBottomColor: "#707070",
-        borderBottomWidth: .5,
-        padding: 10.
+        borderBottomColor: "#8d8d8d",
+        borderBottomWidth: .3,
+        padding: 10,
     },
     entrySection: {
         // backgroundColor: "green",

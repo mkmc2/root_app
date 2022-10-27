@@ -115,7 +115,7 @@ export const GroupHomeScreen = () => {
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp10.png')}
                         name='envelope'
-                        userName='Adam Sammy'
+                        userName='Adam Sinns'
                         postTitle='Added 3 new photos'
                         postTime='2 hour ago'
                         // postDescription='added a photo:'

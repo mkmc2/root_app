@@ -11,12 +11,14 @@ import mainStyles from '../../../styles/mainStyles';
 
 // Components
 import GroupReplyMessageHeader from '../../../components/GroupReplyMessageHeader';
+import GroupMessageHeader from '../../../components/GroupMessageHeader';
 import FilterMenu from '../../../components/FilterMenu';
 import GroupThreadIndvEntry from '../../../components/GroupThreadIndvEntry';
 
 //Other Imports
 import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
+import GroupReplyMessageEntry from '../../../components/GroupReplyMessageEntry';
 
 export const GroupReplyMessageScreen = () => {
     const navigation = useNavigation();
@@ -26,7 +28,22 @@ export const GroupReplyMessageScreen = () => {
             {/* HEADER */}
             <View style={styles.headerContainer}>
                 {/* <HeaderGray HeaderTitle="Message Thread" /> */}
-                <GroupReplyMessageHeader
+                {/* <GroupReplyMessageHeader
+                    source={require('../../../../assets/temporaryAssets/pfp1.png')}
+                    userActualName="Leslie Stark"
+                    useUsername="@LeslieS2"
+                    threadTitle="What to bring???"
+                    firstMessage="Hey guys! This is my first time going to a festival like this and I'm a little nervous and don't know what to bring.. Please help!"
+                    name="bookmark-outline"
+                    initialPostUserPic={require('../../../../assets/temporaryAssets/pfp1.png')}
+                    initialPostUserActualName="Leslie Powell"
+                    timeOfPost="3 hours ago"
+                    responseToMessage="Absolutely nothing to worry about! Just rage and have a good time."
+                    responsePostUserActualName="Jon Summit"
+                    timeOfResponse="1 hour ago"
+                    responsePostUserPic={require('../../../../assets/temporaryAssets/pfp6.png')}
+                /> */}
+                <GroupMessageHeader
                     source={require('../../../../assets/temporaryAssets/pfp1.png')}
                     userActualName="Leslie Stark"
                     useUsername="@LeslieS2"
@@ -44,14 +61,32 @@ export const GroupReplyMessageScreen = () => {
             </View>
             <ScrollView style={styles.mainContainer}>
                 <View style={{ paddingVertical: 10, }}>
-                    <FilterMenu
-                        filterButton1="Recent"
-                        filterButton2="Popular"
-                        filterButton3="Pinned"
-                        filterButton1route={() => (console.log("Indv Message Recent button pressed"))}
-                        filterButton2route={() => (console.log("Indv Popular button pressed"))}
-                        filterButton3route={() => (console.log("Indv Pined button pressed"))}
+                    <GroupReplyMessageEntry
+                        replyToUser="Leslie Powell"
+                        timeOfPost="3 hours ago"
+                        responseToMessage="Absolutely nothing to worry about! Just rage and have a good time."
+                        responsePostUserActualName="Jon Summit"
+                        timeOfResponse="1 hour ago"
+                        responsePostUserPic={require('../../../../assets/temporaryAssets/pfp6.png')}
+                        name="bookmark-outline"
                     />
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={{ flexDirection: 'row', }}>
+                            <MaterialIcons name="subdirectory-arrow-right" size={26} color="#4D4D4D" />
+                            <View style={{ flexDirection: 'row', alignItems: 'flex-end', paddingBottom: 2, }}>
+                                <Text style={mainStyles.XStext}>Replies to </Text>
+                                <Text style={[mainStyles.XStext, { color: "#4D90FF", fontWeight: '800', }]}>Jon Summit</Text>
+                            </View>
+                        </View>
+                        <FilterMenu
+                            filterButton1="Recent"
+                            filterButton2="Popular"
+                            filterButton3="Pinned"
+                            filterButton1route={() => (console.log("Indv Message Recent button pressed"))}
+                            filterButton2route={() => (console.log("Indv Popular button pressed"))}
+                            filterButton3route={() => (console.log("Indv Pined button pressed"))}
+                        />
+                    </View>
                 </View>
                 <View style={{ flex: 1, }}>
                     {/* <View>

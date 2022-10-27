@@ -26,7 +26,10 @@ export const CreateShortnameScreen = () => {
             <View style={mainScreenLayoutStyles.headerContainer}>
                 <HeaderGray HeaderTitle="Group Username" />
             </View>
-            <ScrollView style={groupRowStyling.mainContainer}>
+            <ScrollView
+                style={groupRowStyling.mainContainer}
+                scrollEnabled={false}
+            >
                 {/* <CreateGroupEntry
                     entryTitle="New Group"
                     descriptionText="This is the title of your group. Make it short and simple so others' can find it more easily."
@@ -110,7 +113,7 @@ export const CreateShortnameScreen = () => {
                         </View> */}
                     </View>
                 </View>
-                <View style={groupRowStyling.boxDivider}>
+                <View style={[groupRowStyling.boxDivider, {}]}>
                     <View style={groupRowStyling.groupEntryContainer}>
                         <View style={groupRowStyling.newGroupContainer}>
                             <View style={groupRowStyling.titleIconRow}>

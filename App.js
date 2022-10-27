@@ -16,6 +16,7 @@ import GroupHomePhotosScreen from './src/screens/groupHomeScreens/GroupHomePhoto
 // subFolder: groupHomeSubScreens
 import GroupMessageScreen from './src/screens/groupHomeScreens/groupHomeSubScreens/GroupMessageScreen';
 import GroupReplyMessageScreen from './src/screens/groupHomeScreens/groupHomeSubScreens/GroupReplyMessageScreen';
+import GroupHomeFullScreen from './src/screens/groupHomeScreens/groupHomeSubScreens/GroupHomeFullScreen';
 // Folder: signupScreens
 import LoginScreen from './src/screens/signupScreens/LoginScreen';
 import SignUpNameScreen from './src/screens/signupScreens/SignUpNameScreen';
@@ -100,6 +101,10 @@ function App() {
         <Stack.Screen
           name="GroupReplyMessage"
           component={GroupReplyMessageScreen}
+        />
+        <Stack.Screen
+          name="GroupFullScreen"
+          component={GroupHomeFullScreen}
         />
         {/* Login/Signup Screens; Folder: signupScreens */}
         <Stack.Screen
