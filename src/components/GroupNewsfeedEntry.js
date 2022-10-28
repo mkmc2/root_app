@@ -59,8 +59,8 @@ export const GroupNewsfeedEntry = ({ userName, threadTitle, postTime, source, na
 
 const styles = StyleSheet.create({
     rowLineDivider: {
-        borderBottomColor: "#707070",
-        borderBottomWidth: .5,
+        borderBottomColor: "#8d8d8d",
+        borderBottomWidth: .3,
         padding: 10.
     },
     entrySection: {

@@ -2,6 +2,7 @@ import React from 'react';
 import { Text, View, Image, StyleSheet, ScrollView, TextInput, TouchableOpacity, Keyboard } from 'react-native';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
+import { useNavigation } from '@react-navigation/native';
 // Styling
 import mainStyles from '../styles/mainStyles';
 import mainScreenLayoutStyles from '../styles/mainScreenLayoutStyle';
@@ -17,6 +18,7 @@ import GroupInfoBox from '../components/GroupInfoBox';
 import FilterMenu from '../components/FilterMenu';
 
 export const DiscoverScreen = () => {
+    const navigation = useNavigation();
     return (
         <View
             style={mainStyles.container}
@@ -25,7 +27,7 @@ export const DiscoverScreen = () => {
             <View style={mainScreenLayoutStyles.headerContainer}>
                 <Header
                     HeaderTitle="Discover"
-                    icon="search"
+                    icon=""
                 />
             </View>
             <ScrollView style={mainScreenLayoutStyles.mainContainer}>
@@ -62,6 +64,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -75,6 +78,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="954"
                                 groupNumberOfMessagePhotos="583"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -88,6 +92,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -101,6 +106,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="342"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -114,6 +120,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="397"
                                 groupNumberOfMessagePhotos="60"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -127,6 +134,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="5.2k"
                                 groupNumberOfMessagePhotos="1.5k"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -140,6 +148,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="1.9k"
                                 groupNumberOfMessagePhotos="571"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -153,6 +162,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="12k"
                                 groupNumberOfMessagePhotos="9.3k"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                         <View style={styles.groupRowView}>
@@ -166,6 +176,7 @@ export const DiscoverScreen = () => {
                                 groupNumberOfMessageChains="98"
                                 groupNumberOfMessagePhotos="18"
                                 name="bookmark-outline"
+                                discoverGroupButtonPressed={() => navigation.navigate('GroupPageHome', console.log("Reply to Message button pressed"))}
                             />
                         </View>
                     </ScrollView>

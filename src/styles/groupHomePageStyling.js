@@ -23,7 +23,7 @@ const groupHomePageStyling = StyleSheet.create({
     },
     navbarContainer: {
         flex: 1,
-        minHeight: 100,
+        minHeight: 90,
     },
 })
 

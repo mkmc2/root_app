@@ -13,8 +13,8 @@ export const Header = ({ HeaderTitle, icon }) => {
 
     return (
         <View style={styles.headerContainer}>
-            <View style={styles.headerRow}>
-                <Text style={mainStyles.headerText}>{HeaderTitle}</Text>
+            <View style={[styles.headerRow, {}]}>
+                <Text style={[mainStyles.headerText, {}]}>{HeaderTitle}</Text>
                 <TouchableOpacity
                     // below will be a link to a search bar modal that will expand on the current screen within the header
                     // onPress={() => navigation.navigate('Login')}>
@@ -31,7 +31,7 @@ export const Header = ({ HeaderTitle, icon }) => {
             {showSearchBar ?
                 (
                     <View style={{}}>
-                        <Text>Testing</Text>
+                        <Text>Opens a search bar</Text>
                     </View>
                 ) : null
             }

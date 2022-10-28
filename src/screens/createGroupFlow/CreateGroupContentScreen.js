@@ -106,64 +106,66 @@ export const CreateGroupContentScreen = () => {
                         </View>
                     </View>
                 </View>
-                <View style={groupRowStyling.boxDivider}>
-                    <View style={styles.contentContainer}>
-                        <View style={styles.newContainer}>
-                            <Text style={mainStyles.mdBlueText}>Add Users</Text>
-                            <Text style={groupRowStyling.subTextGray}>Click the plus icon to add users to the group.</Text>
+                <ScrollView>
+                    <View style={groupRowStyling.boxDivider}>
+                        <View style={styles.contentContainer}>
+                            <View style={styles.newContainer}>
+                                <Text style={mainStyles.mdBlueText}>Add Users</Text>
+                                <Text style={groupRowStyling.subTextGray}>Click the plus icon to add users to the group.</Text>
+                            </View>
+                            <TouchableOpacity style={styles.plusIcon}>
+                                <Image
+                                    source={require('../../../assets/icons/plusBlue.png')}
+                                    style={{ height: 25, width: 25, }}
+                                />
+                            </TouchableOpacity>
                         </View>
-                        <TouchableOpacity style={styles.plusIcon}>
-                            <Image
-                                source={require('../../../assets/icons/plusBlue.png')}
-                                style={{ height: 25, width: 25, }}
-                            />
+                    </View>
+                    <View style={groupRowStyling.boxDivider}>
+                        <View style={styles.contentContainer}>
+                            {/* Add Location */}
+                            <View style={styles.newContainer}>
+                                <Text style={mainStyles.mdRedText}>Start a Thread</Text>
+                                <Text style={groupRowStyling.subTextGray}>Get the discussion started by posting your first thread.</Text>
+                            </View>
+                            <TouchableOpacity style={styles.plusIcon}>
+                                <Image
+                                    source={require('../../../assets/icons/plusRed.png')}
+                                    style={{ height: 25, width: 25, }}
+                                />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                    <View style={groupRowStyling.boxDivider}>
+                        <View style={styles.contentContainer}>
+                            {/* Add Location */}
+                            <View style={styles.newContainer}>
+                                <Text style={mainStyles.mdYellowText}>Add Photo(s)</Text>
+                                <Text style={groupRowStyling.subTextGray}>Add some images to the group page.</Text>
+                            </View>
+                            <TouchableOpacity style={styles.plusIcon}>
+                                <Image
+                                    source={require('../../../assets/icons/plusYellow.png')}
+                                    style={{ height: 25, width: 25, }}
+                                />
+                            </TouchableOpacity>
+                        </View>
+                    </View>
+                    <View style={groupRowStyling.buttonView}>
+                        <TouchableOpacity
+                            style={mainStyles.greenButton}
+                            onPress={() => navigation.navigate('GroupPageHome')}
+                        >
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <Text style={mainStyles.whiteButtonText}>finish</Text>
+                                <FontAwesome name="arrow-right" size={22} color="white" style={{ paddingLeft: 5 }} />
+                            </View>
+                        </TouchableOpacity>
+                        <TouchableOpacity style={{ alignItems: "center", paddingVertical: 10 }}>
+                            <Text style={mainStyles.mdBlueText}>skip this and finish</Text>
                         </TouchableOpacity>
                     </View>
-                </View>
-                <View style={groupRowStyling.boxDivider}>
-                    <View style={styles.contentContainer}>
-                        {/* Add Location */}
-                        <View style={styles.newContainer}>
-                            <Text style={mainStyles.mdRedText}>Start a Thread</Text>
-                            <Text style={groupRowStyling.subTextGray}>Get the discussion started by posting your first thread.</Text>
-                        </View>
-                        <TouchableOpacity style={styles.plusIcon}>
-                            <Image
-                                source={require('../../../assets/icons/plusRed.png')}
-                                style={{ height: 25, width: 25, }}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
-                <View style={groupRowStyling.boxDivider}>
-                    <View style={styles.contentContainer}>
-                        {/* Add Location */}
-                        <View style={styles.newContainer}>
-                            <Text style={mainStyles.mdYellowText}>Add Photo(s)</Text>
-                            <Text style={groupRowStyling.subTextGray}>Add some images to the group page.</Text>
-                        </View>
-                        <TouchableOpacity style={styles.plusIcon}>
-                            <Image
-                                source={require('../../../assets/icons/plusYellow.png')}
-                                style={{ height: 25, width: 25, }}
-                            />
-                        </TouchableOpacity>
-                    </View>
-                </View>
-                <View style={groupRowStyling.buttonView}>
-                    <TouchableOpacity
-                        style={mainStyles.greenButton}
-                        onPress={() => navigation.navigate('GroupPageHome')}
-                    >
-                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Text style={mainStyles.whiteButtonText}>finish</Text>
-                            <FontAwesome name="arrow-right" size={22} color="white" style={{ paddingLeft: 5 }} />
-                        </View>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={{ alignItems: "center", paddingVertical: 10 }}>
-                        <Text style={mainStyles.mdBlueText}>skip this and finish</Text>
-                    </TouchableOpacity>
-                </View>
+                </ScrollView>
             </ScrollView>
             <View style={mainScreenLayoutStyles.navbarContainer}>
                 <NavBar />

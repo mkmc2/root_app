@@ -2,7 +2,7 @@
   "expo": {
     "name": "root",
     "slug": "root",
-    "version": "1.0.0",
+    "version": "1.0.2",
     "orientation": "portrait",
     "icon": "./assets/RootIcon.png",
     "userInterfaceStyle": "light",
@@ -20,16 +20,22 @@
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "com.root.application",
-      "buildNumber": "1.0.0"
+      "buildNumber": "1.0.2"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.root.application"
     },
     "web": {
       "favicon": "./assets/RootIcon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "9620613d-8c1a-48b3-acd0-3b8a2edb0507"
+      }
     }
   }
 }

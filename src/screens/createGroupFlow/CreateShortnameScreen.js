@@ -27,7 +27,7 @@ export const CreateShortnameScreen = () => {
                 <HeaderGray HeaderTitle="Group Username" />
             </View>
             <ScrollView
-                style={groupRowStyling.mainContainer}
+                style={[groupRowStyling.mainContainer, {}]}
                 scrollEnabled={false}
             >
                 {/* <CreateGroupEntry
@@ -113,48 +113,50 @@ export const CreateShortnameScreen = () => {
                         </View> */}
                     </View>
                 </View>
-                <View style={[groupRowStyling.boxDivider, {}]}>
-                    <View style={groupRowStyling.groupEntryContainer}>
-                        <View style={groupRowStyling.newGroupContainer}>
-                            <View style={groupRowStyling.titleIconRow}>
-                                <Text style={mainStyles.mdBlueText}>Create Group Username</Text>
-                                <TouchableOpacity
-                                    onPress={() => { setUsernameHowToModalOpen(true) }}
-                                >
-                                    <Image
-                                        source={require('../../../assets/icons/infoIconBlue.png')}
-                                        style={{ height: 25, width: 25, }}
-                                    />
-                                </TouchableOpacity>
-                            </View>
-                            <View style={groupRowStyling.searchContainer}>
-                                <View style={groupRowStyling.backgroundStyle}>
-                                    <TextInput
-                                        groupUsername={groupUsername}
-                                        onTermChange={setGroupUsername}
-                                        autoCorrect={false}
-                                        style={groupRowStyling.inputTextRed}
-                                        placeholder="@LulupalozaBC2022"
-                                    // onChangeText={onTermChange} <- shortening code
-                                    // onEndEditing={onTermSubmit} <- shortening code
-                                    />
+                <ScrollView style={{ height: '100%', }}>
+                    <View style={[groupRowStyling.boxDivider, {}]}>
+                        <View style={groupRowStyling.groupEntryContainer}>
+                            <View style={groupRowStyling.newGroupContainer}>
+                                <View style={groupRowStyling.titleIconRow}>
+                                    <Text style={mainStyles.mdBlueText}>Create Group Username</Text>
+                                    <TouchableOpacity
+                                        onPress={() => { setUsernameHowToModalOpen(true) }}
+                                    >
+                                        <Image
+                                            source={require('../../../assets/icons/infoIconBlue.png')}
+                                            style={{ height: 25, width: 25, }}
+                                        />
+                                    </TouchableOpacity>
                                 </View>
+                                <View style={groupRowStyling.searchContainer}>
+                                    <View style={groupRowStyling.backgroundStyle}>
+                                        <TextInput
+                                            groupUsername={groupUsername}
+                                            onTermChange={setGroupUsername}
+                                            autoCorrect={false}
+                                            style={groupRowStyling.inputTextRed}
+                                            placeholder="@LulupalozaBC2022"
+                                        // onChangeText={onTermChange} <- shortening code
+                                        // onEndEditing={onTermSubmit} <- shortening code
+                                        />
+                                    </View>
+                                </View>
+                                <Text style={groupRowStyling.subTextGray}>Think of a username as a shortened combo of the full group name. Add important details about the group while keeping it short. </Text>
                             </View>
-                            <Text style={groupRowStyling.subTextGray}>Think of a username as a shortened combo of the full group name. Add important details about the group while keeping it short. </Text>
                         </View>
                     </View>
-                </View>
-                <View style={groupRowStyling.buttonView}>
-                    <TouchableOpacity
-                        style={mainStyles.redButton}
-                        onPress={() => navigation.navigate('GroupTags')}
-                    >
-                        <View style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <Text style={mainStyles.whiteButtonText}>next</Text>
-                            <FontAwesome name="arrow-right" size={22} color="white" style={{ paddingLeft: 5 }} />
-                        </View>
-                    </TouchableOpacity>
-                </View>
+                    <View style={groupRowStyling.buttonView}>
+                        <TouchableOpacity
+                            style={mainStyles.redButton}
+                            onPress={() => navigation.navigate('GroupTags')}
+                        >
+                            <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                                <Text style={mainStyles.whiteButtonText}>next</Text>
+                                <FontAwesome name="arrow-right" size={22} color="white" style={{ paddingLeft: 5 }} />
+                            </View>
+                        </TouchableOpacity>
+                    </View>
+                </ScrollView>
             </ScrollView>
             <View style={mainScreenLayoutStyles.navbarContainer}>
                 <NavBar />

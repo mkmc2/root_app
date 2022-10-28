@@ -28,11 +28,11 @@ export const CreateGroupScreen = () => {
     return (
         <View style={mainStyles.container}>
             {/* HEADER */}
-            <View style={mainScreenLayoutStyles.headerContainer}>
+            <View style={[mainScreenLayoutStyles.headerContainer, { zIndex: 999, }]}>
                 <HeaderGray HeaderTitle="Create New Group" />
             </View>
-            <ScrollView
-                style={groupRowStyling.mainContainer}
+            <View
+                style={[groupRowStyling.mainContainer, {}]}
                 scrollEnabled={false}
             >
                 {/* <CreateGroupEntry
@@ -43,7 +43,7 @@ export const CreateGroupScreen = () => {
                 {/* Group Name */}
 
                 {/* Inputting Group Row */}
-                <View style={groupRowStyling.groupContainer}>
+                <View style={[groupRowStyling.groupContainer, {}]}>
                     <View style={groupRowStyling.entrySection}>
                         {/* Icon Row */}
                         <View style={groupRowStyling.entryIconView}>
@@ -117,7 +117,7 @@ export const CreateGroupScreen = () => {
                         </View> */}
                     </View>
                 </View>
-                <ScrollView>
+                <ScrollView style={{}}>
                     <View style={groupRowStyling.boxDivider}>
                         <View style={groupRowStyling.groupEntryContainer}>
                             <View style={groupRowStyling.newGroupContainer}>
@@ -225,7 +225,7 @@ export const CreateGroupScreen = () => {
                         </TouchableOpacity>
                     </View>
                 </ScrollView>
-            </ScrollView>
+            </View>
             <View style={mainScreenLayoutStyles.navbarContainer}>
                 <NavBar />
             </View>

@@ -23,13 +23,13 @@ export const GroupHomeScreen = () => {
     const navigation = useNavigation();
 
     return (
-        <View style={groupHomePageStyling.container}>
+        <View style={mainScreenLayoutStyles.container}>
             {/* HEADER */}
             <View style={groupHomePageStyling.headerContainer}>
                 <HeaderGray HeaderTitle="Group Newsfeed" />
                 <GroupHomeHeader />
             </View>
-            <ScrollView style={groupHomePageStyling.mainContainer}>
+            <ScrollView style={mainScreenLayoutStyles.mainContainer}>
                 <View>
                     {/* <IconMenuBar /> */}
                     <View>
@@ -57,7 +57,7 @@ export const GroupHomeScreen = () => {
                         postTitle="What to bring???"
                         postTime='3 mins ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp2.png')}
@@ -80,7 +80,7 @@ export const GroupHomeScreen = () => {
                         postTitle="What kind of food should I bring?"
                         postTime='24 mins ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp6.png')}
@@ -101,7 +101,7 @@ export const GroupHomeScreen = () => {
                         postTitle="Rain in the forecast..."
                         postTime='1 hour ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp11.png')}
@@ -110,7 +110,7 @@ export const GroupHomeScreen = () => {
                         postTitle="Security will be strict!"
                         postTime='1 hour ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp10.png')}
@@ -133,7 +133,7 @@ export const GroupHomeScreen = () => {
                         postTitle="Anyone have an extra ticket?"
                         postTime='3 hours ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     <GroupNewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp8.png')}
@@ -154,7 +154,7 @@ export const GroupHomeScreen = () => {
                         postTitle="Is it safe to go solo?"
                         postTime='1 day ago'
                         postDescription='posted in:'
-                        icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                        icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                     />
                     {/* <NewsfeedEntry
                         source={require('../../../assets/temporaryAssets/pfp4.png')}

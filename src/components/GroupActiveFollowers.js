@@ -16,17 +16,17 @@ export const GroupActiveFollowers = ({ followerProfilePic, followerName, followe
                 <View style={{ alignItems: 'flex-start' }}>
                     <View style={{ justifyContent: 'center', alignItems: 'center', paddingHorizontal: 5, }}>
                         <View>
-                            <Text style={[mainStyles.XStext, { fontSize: 8, color: '#EA594C', fontWeight: "600", paddingBottom: 1, }]}>{creator}</Text>
+                            <Text style={[mainStyles.XStext, { fontSize: 10, color: '#EA594C', fontWeight: "600", paddingBottom: 1, }]}>{creator}</Text>
                         </View>
                         <Image
                             style={styles.responseProfilePic}
                             source={followerProfilePic}
                         />
-                        <View style={{ paddingLeft: 5, justifyContent: 'flex-end', }}>
-                            <Text style={[mainStyles.mainDarkGray, { fontSize: 10, fontWeight: "700", }]}>{followerName}</Text>
+                        <View style={{ paddingLeft: 5, paddingTop: 5, justifyContent: 'flex-end', }}>
+                            <Text style={[mainStyles.mainDarkGray, { fontSize: 12, fontWeight: "700", }]}>{followerName}</Text>
                         </View>
                         <View>
-                            <Text style={[mainStyles.XStext, { fontSize: 8, }]}>{followerHandle}</Text>
+                            <Text style={[mainStyles.XStext, { fontSize: 10, }]}>{followerHandle}</Text>
                         </View>
                     </View>
                 </View>
@@ -50,8 +50,8 @@ const styles = StyleSheet.create({
         paddingTop: 5,
     },
     responseProfilePic: {
-        height: 30,
-        width: 30,
+        height: 35,
+        width: 35,
     },
 })
 

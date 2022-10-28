@@ -20,13 +20,14 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
+import mainScreenLayoutStyles from '../../../styles/mainScreenLayoutStyle';
 
 export const GroupHomeFullScreen = () => {
     const navigation = useNavigation();
 
     return (
         <View style={styles.container}>
-            <View style={styles.headerContainer}>
+            <View style={[styles.headerContainer, {}]}>
                 {/* <HeaderGray HeaderTitle="Group" /> */}
                 <View style={styles.headerRow}>
                     {/* <Text style={mainStyles.headerText}>Group Home Page</Text> */}
@@ -113,6 +114,7 @@ export const GroupHomeFullScreen = () => {
                                 </View>
                             </TouchableOpacity>
                         </View>
+                        <Text style={[mainStyles.XStext, { alignSelf: 'flex-end', paddingTop: 1, opacity: .5, }]}>Created 08/22/2022</Text>
                         {/* <View style={{ alignItems: 'flex-end', padding: 5, }}>
                             <View style={{ flexDirection: 'row', alignItems: 'center', }}>
                                 <View style={{ padding: 2, }}>
@@ -133,127 +135,130 @@ export const GroupHomeFullScreen = () => {
                         </View> */}
                     </View>
                 </View>
-                <ScrollView>
-                    <View style={[styles.groupInfoView, { paddingHorizontal: 0, }]}>
-                        <TouchableOpacity>
-                            <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 10, paddingBottom: 0, }]}>Followers: 142</Text>
-                        </TouchableOpacity>
-                        <View style={{}}>
-                            <ScrollView
-                                horizontal={true}
-                                showsHorizontalScrollIndicator={false}
-                            >
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp6.png')}
-                                    followerName="Jon Summit"
-                                    followerHandle="@jonSummit1"
-                                    creator="Creator"
-                                />
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp2.png')}
-                                    followerName="Mike Adams"
-                                    followerHandle="@theFakeMike"
-                                />
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp11.png')}
-                                    followerName="Omar Syed"
-                                    followerHandle="@OmarSv2"
-                                />
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp8.png')}
-                                    followerName="Darren Halter"
-                                    followerHandle="@DHalt43"
-                                />
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp1.png')}
-                                    followerName="Leslie Powell"
-                                    followerHandle="@LesPow"
-                                />
-                                <GroupActiveFollowers
-                                    followerProfilePic={require('../../../../assets/temporaryAssets/pfp3.png')}
-                                    followerName="Sarah McKinley"
-                                    followerHandle="@SarahMcKinley123"
-                                />
-                            </ScrollView>
-                        </View>
-                    </View>
-                    <View style={styles.groupInfoView}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
-                            <View>
-                                <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>Tags:</Text>
-                            </View>
+                <View style={{}}><View style={{ borderBottomColor: "#8d8d8d", borderBottomWidth: .3, }}></View></View>
+                <View>
+                    <ScrollView style={styles.settingsContainer}>
+                        <View style={[styles.groupInfoView, { paddingHorizontal: 0, }]}>
                             <TouchableOpacity>
-                                {/* <Ionicons name="md-add-circle-outline" size={24} color="#4D90FF" /> */}
-                                <FontAwesome name="plus-square" size={24} color="#4D90FF" />
+                                <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 10, paddingBottom: 0, }]}>Followers: 142</Text>
                             </TouchableOpacity>
+                            <View style={{}}>
+                                <ScrollView
+                                    horizontal={true}
+                                    showsHorizontalScrollIndicator={false}
+                                >
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp6.png')}
+                                        followerName="Jon Summit"
+                                        followerHandle="@jonSummit1"
+                                        creator="Creator"
+                                    />
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp2.png')}
+                                        followerName="Mike Adams"
+                                        followerHandle="@theFakeMike"
+                                    />
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp11.png')}
+                                        followerName="Omar Syed"
+                                        followerHandle="@OmarSv2"
+                                    />
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp8.png')}
+                                        followerName="Darren Halter"
+                                        followerHandle="@DHalt43"
+                                    />
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp1.png')}
+                                        followerName="Leslie Powell"
+                                        followerHandle="@LesPow"
+                                    />
+                                    <GroupActiveFollowers
+                                        followerProfilePic={require('../../../../assets/temporaryAssets/pfp3.png')}
+                                        followerName="Sarah McKinley"
+                                        followerHandle="@SarahMcKinley123"
+                                    />
+                                </ScrollView>
+                            </View>
                         </View>
-                        <View style={mainStyles.row2}>
-                            <View style={styles.tagStyle}>
-                                <View style={styles.tagBg}>
-                                    <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Entertainment</Text>
+                        <View style={styles.groupInfoView}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View>
+                                    <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>Tags:</Text>
+                                </View>
+                                <TouchableOpacity>
+                                    {/* <Ionicons name="md-add-circle-outline" size={24} color="#4D90FF" /> */}
+                                    <FontAwesome name="plus-square" size={24} color="#4D90FF" />
+                                </TouchableOpacity>
+                            </View>
+                            <View style={mainStyles.row2}>
+                                <View style={styles.tagStyle}>
+                                    <View style={styles.tagBg}>
+                                        <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Entertainment</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.tagStyle}>
+                                    <View style={styles.tagBg}>
+                                        <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Music</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.tagStyle}>
+                                    <View style={styles.tagBg}>
+                                        <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Festival</Text>
+                                    </View>
+                                </View>
+                                <View style={styles.tagStyle}>
+                                    <View style={styles.tagBg}>
+                                        <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Concert</Text>
+                                    </View>
                                 </View>
                             </View>
-                            <View style={styles.tagStyle}>
-                                <View style={styles.tagBg}>
-                                    <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Music</Text>
-                                </View>
-                            </View>
-                            <View style={styles.tagStyle}>
-                                <View style={styles.tagBg}>
-                                    <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Festival</Text>
-                                </View>
-                            </View>
-                            <View style={styles.tagStyle}>
-                                <View style={styles.tagBg}>
-                                    <Text style={[mainStyles.mainBlue, { fontWeight: "700", paddingVertical: 2, paddingHorizontal: 4, }]}>Concert</Text>
-                                </View>
-                            </View>
                         </View>
-                    </View>
-                    <View style={styles.groupInfoView}>
-                        <View>
-                            <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>Bio:</Text>
-                        </View>
-                        <View>
-                            <Text style={mainStyles.XStext}>Lulupaloza is a group created to connect everyone going to a show, or for those who have already been to share their experiences.
-                                Please feel free to upload pics and start threads that you think will be helpful for everyone!</Text>
-                        </View>
-                    </View>
-                    <View style={styles.groupInfoView}>
-                        <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                        <View style={styles.groupInfoView}>
                             <View>
-                                <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>More:</Text>
+                                <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>Bio:</Text>
                             </View>
-                            {/* <TouchableOpacity>
+                            <View>
+                                <Text style={mainStyles.XStext}>Lulupaloza is a group created to connect everyone going to a show, or for those who have already been to share their experiences.
+                                    Please feel free to upload pics and start threads that you think will be helpful for everyone!</Text>
+                            </View>
+                        </View>
+                        <View style={styles.groupInfoView}>
+                            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+                                <View>
+                                    <Text style={[mainStyles.header2Text, { fontSize: 16, paddingLeft: 0, paddingBottom: 5, }]}>More:</Text>
+                                </View>
+                                {/* <TouchableOpacity>
                                 <FontAwesome name="plus-square" size={24} color="#4D90FF" />
                             </TouchableOpacity> */}
+                            </View>
+                            <View style={[mainStyles.row2, { justifyContent: 'flex-start', alignItems: 'center', paddingHorizontal: 0, }]}>
+                                <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
+                                    <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
+                                        <FontAwesome5 name="cog" size={24} color="#4D4D4D" />
+                                        <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>Settings</Text>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
+                                    <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
+                                        <FontAwesome5 name="user-cog" size={24} color="#4D4D4D" />
+                                        <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>User</Text>
+                                    </TouchableOpacity>
+                                </View>
+                                <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
+                                    <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
+                                        <MaterialIcons name="report" size={28} color="#4D4D4D" />
+                                        <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>Report</Text>
+                                    </TouchableOpacity>
+                                </View>
+                            </View>
                         </View>
-                        <View style={[mainStyles.row2, { justifyContent: 'flex-start', alignItems: 'center', paddingHorizontal: 0, }]}>
-                            <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
-                                <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
-                                    <FontAwesome5 name="cog" size={24} color="#4D4D4D" />
-                                    <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>Settings</Text>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
-                                <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
-                                    <FontAwesome5 name="user-cog" size={24} color="#4D4D4D" />
-                                    <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>User</Text>
-                                </TouchableOpacity>
-                            </View>
-                            <View style={[styles.tagStyle, { paddingHorizontal: 20, }]}>
-                                <TouchableOpacity style={[styles.null, { alignItems: 'center', }]}>
-                                    <MaterialIcons name="report" size={28} color="#4D4D4D" />
-                                    <Text style={[mainStyles.XStext, { paddingTop: 2, }]}>Report</Text>
-                                </TouchableOpacity>
-                            </View>
-                        </View>
-                    </View>
-                </ScrollView>
+                    </ScrollView>
+                </View>
             </View>
-            <View style={styles.navbarContainer}>
+            {/* <View style={[mainScreenLayoutStyles.navbarContainer, {}]}>
                 <NavBar />
-            </View>
+            </View> */}
         </View>
     )
 };
@@ -263,7 +268,8 @@ const styles = StyleSheet.create({
     //main screen layout
     //main screen layout
     container: {
-        backgroundColor: "#FFFFFF",
+        // backgroundColor: "#F5F5F5",
+        backgroundColor: "#F5F5F5",
         flex: 1,
     },
     headerContainer: {
@@ -274,21 +280,11 @@ const styles = StyleSheet.create({
         // minHeight: 110,
         // backgroundColor: "red",
         backgroundColor: "#F5F5F5",
-        // borderBottomLeftRadius: 20,
-        // borderBottomRightRadius: 20,
-        // minHeight: 100,
-        //Shadow
-        // shadowColor: "#000",
-        // shadowOffset: {
-        //     width: 0,
-        //     height: 3,
-        // },
-        // shadowOpacity: 0.27,
-        // shadowRadius: 4.65,
     },
     mainContainer: {
         flexGrow: 7,
         backgroundColor: "#F5F5F5",
+        // backgroundColor: "#fff",
     },
     navbarContainer: {
         flex: 0,
@@ -345,8 +341,8 @@ const styles = StyleSheet.create({
 
     },
     rowDivider: {
-        borderBottomColor: "#8d8d8d",
-        borderBottomWidth: .3,
+        borderBottomColor: "#707070",
+        borderBottomWidth: .35,
         paddingVertical: 5,
         paddingVertical: 10,
     },
@@ -378,6 +374,26 @@ const styles = StyleSheet.create({
         borderColor: '#4D90FF',
         borderWidth: 2,
         borderRadius: 10,
+    },
+    bgShadow: {
+        paddingTop: 5,
+        flex: 1,
+        //Shadow
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: -1,
+        },
+        shadowOpacity: 0.3,
+        shadowRadius: 8,
+        borderTopStartRadius: 20,
+        borderTopEndRadius: 20,
+    },
+    settingsContainer: {
+        backgroundColor: "#F5F5F5",
+        // paddingVertical: 5,
+        // borderTopStartRadius: 20,
+        // borderTopEndRadius: 20,
     },
 })
 

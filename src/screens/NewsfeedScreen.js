@@ -10,7 +10,7 @@ import mainStyles from '../styles/mainStyles';
 import mainScreenLayoutStyles from '../styles/mainScreenLayoutStyle';
 import groupRowStyling from '../styles/groupRowStyling';
 
-export const NewsfeedScreen = ({ }) => {
+export const NewsfeedScreen = ({ showSearchBar }) => {
     return (
         <View style={mainStyles.container}>
             {/* HEADER */}
@@ -35,7 +35,7 @@ export const NewsfeedScreen = ({ }) => {
                     groupLocation=""
                     groupDate=""
                     postTime='7 minutes ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp2.png')}
@@ -59,7 +59,7 @@ export const NewsfeedScreen = ({ }) => {
                     // groupLocation="McLean, VA"
                     groupDate=""
                     postTime='28 minutes ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp4.png')}
@@ -69,7 +69,7 @@ export const NewsfeedScreen = ({ }) => {
                     groupUsername='@BarrysBootcampDupont'
                     // groupLocation="McLean VA"
                     postTime='43 minutes ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp5.png')}
@@ -92,7 +92,7 @@ export const NewsfeedScreen = ({ }) => {
                     postDescription="post in:"
                     groupUsername='@LulupalozaBC2022'
                     postTime='1 hour ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp7.png')}
@@ -117,7 +117,7 @@ export const NewsfeedScreen = ({ }) => {
                     // groupLocation="McLean, VA"
                     // groupDate=""
                     postTime='2 hours ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp9.png')}
@@ -127,7 +127,7 @@ export const NewsfeedScreen = ({ }) => {
                     groupUsername='@McLeanHighSchoolBand'
                     // groupLocation="McLean VA"
                     postTime='4 hours ago'
-                    icon={<FontAwesome name="envelope-o" size={24} color="#EA594C" />}
+                    icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
                     source={require('../../assets/temporaryAssets/pfp10.png')}

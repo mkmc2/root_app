@@ -8,40 +8,24 @@ import groupRowStyling from '../styles/groupRowStyling';
 import { FontAwesome5 } from '@expo/vector-icons';
 import { MaterialIcons } from '@expo/vector-icons';
 
-export const GroupShortRow = ({ source, groupUsername, groupName, groupLocation, groupDate, groupNumberOfUsers, groupNumberOfMessageChains, groupNumberOfMessagePhotos, name }) => {
+export const GroupShortRow = ({ source, groupUsername, groupName, groupLocation, groupDate, groupNumberOfUsers, groupNumberOfMessageChains, groupNumberOfMessagePhotos, name, discoverGroupButtonPressed }) => {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity>
+        <TouchableOpacity onPress={discoverGroupButtonPressed}>
             <View style={styles.mainRow}>
                 <View style={{ flexDirection: 'row', }}>
                     {/* Profile Pic */}
                     <View style={styles.groupInfoView}>
-                        <View style={{ paddingRight: 5, }}>
+                        <View style={{ paddingRight: 10, }}>
                             <Image
                                 style={styles.entryProfilePic}
                                 source={source}
                             />
                         </View>
                         <View style={{ flex: 1, }}>
-                            <View style={{ justifyContent: 'flex-start', alignSelf: "flex-start", paddingHorizontal: 5, flexWrap: 'wrap', }}>
-                                <View>
-                                    <Text numberOfLines={1} style={[mainStyles.subTextGray, { fontSize: 16, }]}>{groupUsername}</Text>
-                                    <View style={[styles.groupNameRow, {}]}>
-                                        <Text
-                                            style={{ color: "#4D90FF", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
-                                            {groupName}
-                                        </Text>
-                                        <Text
-                                            style={{ color: "#EA594C", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
-                                            {groupLocation}
-                                        </Text>
-                                        <Text
-                                            style={{ color: "#FDBA02", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
-                                            {groupDate}
-                                        </Text>
-                                    </View>
-                                </View>
+                            <View>
+                                <Text numberOfLines={1} style={[mainStyles.subTextGray, { fontSize: 16, }]}>{groupUsername}</Text>
                             </View>
                             <View style={styles.groupMetricsView}>
                                 <View style={styles.iconContentRow}>
@@ -65,6 +49,24 @@ export const GroupShortRow = ({ source, groupUsername, groupName, groupLocation,
                                             style={{ height: 20, width: 20, }}
                                         />
                                         <Text style={[groupRowStyling.iconSubText, { fontSize: 11, paddingLeft: 2. }]}>{groupNumberOfMessagePhotos}</Text>
+                                    </View>
+                                </View>
+                            </View>
+                            <View style={{ justifyContent: 'flex-start', alignSelf: "flex-start", flexWrap: 'wrap', }}>
+                                <View>
+                                    <View style={[styles.groupNameRow, {}]}>
+                                        <Text
+                                            style={{ color: "#4D90FF", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
+                                            {groupName}
+                                        </Text>
+                                        <Text
+                                            style={{ color: "#EA594C", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
+                                            {groupLocation}
+                                        </Text>
+                                        <Text
+                                            style={{ color: "#FDBA02", fontSize: 11, fontWeight: 'bold', paddingLeft: 5, }}>
+                                            {groupDate}
+                                        </Text>
                                     </View>
                                 </View>
                             </View>
