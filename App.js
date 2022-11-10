@@ -9,6 +9,8 @@ import NewsfeedScreen from './src/screens/NewsfeedScreen';
 import DiscoverScreen from './src/screens/DiscoverScreen';
 import MyPagesScreen from './src/screens/MyPagesScreen';
 import MyProfileScreen from './src/screens/MyProfileScreen';
+// Folder: subScreens
+import AdvancedDiscoverScreen from './src/screens/subScreens/AdvancedDiscoverScreen';
 // Folder: groupHomeScreens
 import GroupHomeScreen from './src/screens/groupHomeScreens/GroupHomeScreen';
 import GroupHomeMessagesScreen from './src/screens/groupHomeScreens/GroupHomeMessagesScreen';
@@ -79,6 +81,11 @@ function App() {
           name="CreateGroup"
           options={mainHeaderStyle('New Group', '#252B68', '#FFFFFF')}
           component={CreateGroupScreen}
+        />
+        {/* sub Main Screens; Folder: subScreens */}
+        <Stack.Screen
+          name="AdvancedDiscover"
+          component={AdvancedDiscoverScreen}
         />
         {/* Group Home Screens; Folder: groupHomeScreens */}
         <Stack.Screen

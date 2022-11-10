@@ -110,13 +110,13 @@ export const MyPagesScreen = () => {
                 <GroupRow
                     source={require('../../assets/temporaryAssets/group7.png')}
                     name='bookmark'
-                    groupUsername='@ArlingtonLibrary'
-                    groupName="Arlington Public Library"
-                    groupLocation="Arlington, VA"
+                    groupUsername='@4Runner4thGen'
+                    groupName="Toyota 4Runner 4th Gen"
+                    groupLocation=""
                     groupDate=""
-                    groupNumberOfUsers="1.3k"
-                    groupNumberOfMessageChains="12k"
-                    groupNumberOfMessagePhotos="342"
+                    groupNumberOfUsers="8.9k"
+                    groupNumberOfMessageChains="5.2k"
+                    groupNumberOfMessagePhotos="1.5k"
                     groupActivityMeter="34"
                 />
                 {/* Group */}

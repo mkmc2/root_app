@@ -54,26 +54,6 @@ export const CreateGroupContentScreen = () => {
                                 </Text>
                             </View>
                             <View style={mainStyles.row2}>
-                                <Text
-                                    style={{ color: "#4D90FF", fontWeight: 'bold', paddingLeft: 5, }}>
-                                    Lulupaloza
-                                </Text>
-                                <Text
-                                    style={{ color: "#EA594C", fontWeight: 'bold', paddingLeft: 5, }}>
-                                    Vancouver, BC
-                                </Text>
-                                <Text
-                                    style={{ color: "#FDBA02", fontWeight: 'bold', paddingLeft: 5, }}>
-                                    2022
-                                </Text>
-                            </View>
-                            {/* <View>
-                    <Text
-                        style={{ color: "#4D90FF", fontWeight: 'bold', flexWrap: "wrap", paddingLeft: 5, }}>
-                        {groupPath}
-                    </Text>
-                </View> */}
-                            <View style={mainStyles.row2}>
                                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
                                     <Image
                                         source={require('../../../assets/temporaryAssets/ProfileIconThick.png')}
@@ -95,14 +75,34 @@ export const CreateGroupContentScreen = () => {
                                     />
                                     <Text style={groupRowStyling.iconSubText}>0</Text>
                                 </View>
-                                <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
+                                {/* <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
                                     <Image
                                         source={require('../../../assets/temporaryAssets/heartBeat.png')}
                                         style={{ height: 25, width: 25, }}
                                     />
                                     <Text style={groupRowStyling.iconSubText}>0</Text>
-                                </View>
+                                </View> */}
                             </View>
+                            <View style={mainStyles.row2}>
+                                <Text
+                                    style={{ color: "#4D90FF", fontWeight: 'bold', paddingLeft: 5, }}>
+                                    Lulupaloza
+                                </Text>
+                                <Text
+                                    style={{ color: "#EA594C", fontWeight: 'bold', paddingLeft: 5, }}>
+                                    Vancouver, BC
+                                </Text>
+                                <Text
+                                    style={{ color: "#FDBA02", fontWeight: 'bold', paddingLeft: 5, }}>
+                                    2022
+                                </Text>
+                            </View>
+                            {/* <View>
+                    <Text
+                        style={{ color: "#4D90FF", fontWeight: 'bold', flexWrap: "wrap", paddingLeft: 5, }}>
+                        {groupPath}
+                    </Text>
+                </View> */}
                         </View>
                     </View>
                 </View>

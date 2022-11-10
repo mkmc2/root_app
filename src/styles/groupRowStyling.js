@@ -3,8 +3,9 @@ import { StyleSheet } from "react-native";
 const groupRowStyling = StyleSheet.create({
     entrySection: {
         // backgroundColor: "green",
-        flex: 1,
+        // flex: 1,
         padding: 10,
+        // paddingVertical: 10,
         flexDirection: "row",
         // justifyContent: 'space-between',
         // alignItems: 'center',
@@ -22,6 +23,7 @@ const groupRowStyling = StyleSheet.create({
         flex: 2,
         justifyContent: "center",
         alignItems: "center",
+        padding: 5,
 
     },
     entryIconRow: {
@@ -66,12 +68,16 @@ const groupRowStyling = StyleSheet.create({
         flex: 1,
     },
     groupContainer: {
+        // padding: 5,
         backgroundColor: "#F5F5F5",
         // backgroundColor: "red",
-        minHeight: 100,
-        flex: 1,
+        // minHeight: 100,
+        // flex: 1,
+        // flexGrow: 1,
         borderBottomEndRadius: 20,
         borderBottomStartRadius: 20,
+        // borderBottomColor: "#g5g5g5",
+        // borderBottomWidth: .4,
         //Shadow
         shadowColor: "#000",
         shadowOffset: {

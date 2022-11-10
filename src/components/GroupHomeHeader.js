@@ -26,8 +26,8 @@ export const GroupHomeScreen = () => {
                 {/* Group Name */}
 
                 {/* Inputting Group Row */}
-                <View style={groupRowStyling.groupContainer}>
-                    <View style={groupRowStyling.entrySection}>
+                <View style={[groupRowStyling.groupContainer, {}]}>
+                    <View style={[groupRowStyling.entrySection, { margin: 5, }]}>
                         {/* Image Row */}
                         <View>
                             <View style={groupRowStyling.entryIconView}>

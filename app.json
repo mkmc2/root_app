@@ -2,7 +2,7 @@
   "expo": {
     "name": "root",
     "slug": "root",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "orientation": "portrait",
     "icon": "./assets/RootIcon.png",
     "userInterfaceStyle": "light",

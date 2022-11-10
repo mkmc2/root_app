@@ -16,6 +16,10 @@ import GroupHomeHeader from '../components/GroupHomeHeader';
 import MenuBar from '../components/MenuBar';
 import GroupInfoBox from '../components/GroupInfoBox';
 import FilterMenu from '../components/FilterMenu';
+// Other Imports
+import { FontAwesome } from '@expo/vector-icons';
+import { AntDesign } from '@expo/vector-icons';
+import { FontAwesome5 } from '@expo/vector-icons';
 
 export const DiscoverScreen = () => {
     const navigation = useNavigation();
@@ -37,22 +41,51 @@ export const DiscoverScreen = () => {
                     menuOption3="Trending"
                 /> */}
                 <SearchBarInput />
+                {/* <View style={{ alignItems: 'flex-end', paddingHorizontal: 20, paddingTop: 10, }}>
+                    <TouchableOpacity
+                        onPress={() => navigation.navigate('AdvancedDiscover')}
+                        style={{}}>
+                        <Text style={[mainStyles.mainBlue, { fontWeight: '700', fontSize: '16', }]}>Advanced Search</Text>
+                    </TouchableOpacity>
+                </View> */}
                 <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', marginHorizontal: -10, }]}>
                     <MenuBar
                         menuOption1="Suggested"
                         menuOption2="Popular"
                         menuOption3="Trending"
+                        menuButton1={() => (console.log("Suggested Menu button pressed"))}
+                        menuButton2={() => (console.log("Popular Menu button pressed"))}
+                        menuButton3={() => (console.log("Trending Menu button pressed"))}
                     />
-                    <FilterMenu
+                    {/* <FilterMenu
                         filterButton1="Recent"
                         filterButton2="Popular"
                         filterButton3="Pinned"
                         filterButton1route={() => (console.log("Recent button pressed"))}
                         filterButton2route={() => (console.log("Popular button pressed"))}
                         filterButton3route={() => (console.log("Pined button pressed"))}
-                    />
+                    /> */}
                     <ScrollView style={{ paddingVertical: 5, paddingHorizontal: 10, }}>
                         {/* <SearchBarInput /> */}
+                        <View>
+                            <View style={{ flexDirection: 'row', justifyContent: 'flex-end' }}>
+                                <TouchableOpacity style={{ alignItems: 'center' }}>
+                                    {/* <Text style={[mainStyles.XStext, { paddingVertical: 2, }]}>List</Text> */}
+                                    <View style={{ backgroundColor: '#D4D4D4', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5, }}>
+                                        <FontAwesome name="list-ul" size={20} color="black" />
+                                    </View>
+                                </TouchableOpacity>
+                                <TouchableOpacity
+                                    onPress={() => navigation.navigate('AdvancedDiscover')}
+                                    style={{ alignItems: 'center' }}>
+                                    {/* <Text style={[mainStyles.XStext, { paddingVertical: 2, }]}>Find</Text> */}
+                                    <View style={{ backgroundColor: 'transparent', paddingHorizontal: 10, paddingVertical: 5, borderRadius: 5, }}>
+                                        {/* <AntDesign name="database" size={20} color="black" /> */}
+                                        <FontAwesome5 name="search-plus" size={22} color="black" />
+                                    </View>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                         <View style={styles.groupRowView}>
                             <GroupShortRow
                                 source={require('../../assets/temporaryAssets/group6.png')}

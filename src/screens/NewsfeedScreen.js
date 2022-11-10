@@ -72,7 +72,7 @@ export const NewsfeedScreen = ({ showSearchBar }) => {
                     icon={<FontAwesome name="envelope-o" size={20} color="#EA594C" />}
                 />
                 <NewsfeedEntry
-                    source={require('../../assets/temporaryAssets/pfp5.png')}
+                    source={require('../../assets/temporaryAssets/group3.png')}
                     name='camera'
                     userName='New Group'
                     postDescription=""

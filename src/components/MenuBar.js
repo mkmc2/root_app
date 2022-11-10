@@ -14,7 +14,7 @@ export const MenuBar = ({ menuOption1, menuOption2, menuOption3, menuButton1, me
         <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: 20, marginTop: 5, }}>
             <View>
                 <TouchableOpacity
-                    style={styles.backgroundStyle}
+                    style={[styles.backgroundStyle, {}]}
                     onPress={menuButton1}
                 >
                     <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>{menuOption1}</Text>
@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
         borderRadius: 5,
     },
     pressedButton: {
-        // backgroundColor: '#4D4D4D',
-        // color: '#F1F1F1',
-        // width: 100,
-        // borderRadius: 5,
+        backgroundColor: '#4D4D4D',
+        color: '#F1F1F1',
+        width: 100,
+        borderRadius: 5,
         opacity: .5,
     },
 
