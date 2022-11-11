@@ -34,7 +34,7 @@ export const AdvancedDiscoverScreen = () => {
                     icon=""
                 />
             </View>
-            <View style={mainScreenLayoutStyles.mainContainer}>
+            <ScrollView style={mainScreenLayoutStyles.mainContainer}>
                 {/* <MenuBar
                     menuOption1="Suggested"
                     menuOption2="Popular"
@@ -48,7 +48,47 @@ export const AdvancedDiscoverScreen = () => {
                         <Text style={[mainStyles.mainBlue, { fontWeight: '700', fontSize: '16', }]}>Group Search</Text>
                     </TouchableOpacity>
                 </View> */}
-                <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', marginHorizontal: -10, }]}>
+                <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', }]}>
+                    {/* <View style={{ padding: 0, }}>
+                        <View style={[styles.searchContainer, {}]}>
+                            <Text style={[mainStyles.mdGrayText, {}]}>Categories</Text>
+                            <Text style={[mainStyles.XStext, { paddingHorizontal: 5, }]}>Get inspired by discovering different categories</Text>
+                            <View>
+                                <ScrollView
+                                    style={[{ padding: 10, flexDirection: 'row', }]}
+                                    horizontal={true}
+                                >
+                                    <TouchableOpacity style={styles.categoryBackground}>
+                                        <Text style={[styles.categoryText, {}]}>All</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Travel</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Products</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Events</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Music</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Sports</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Social</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Movies</Text>
+                                    </TouchableOpacity>
+                                    <TouchableOpacity>
+                                        <Text style={[styles.categoryText, {}]}>Video Games</Text>
+                                    </TouchableOpacity>
+                                </ScrollView>
+                            </View>
+                        </View>
+                    </View> */}
                     <MenuBar
                         menuOption1="Suggested"
                         menuOption2="Popular"
@@ -66,10 +106,7 @@ export const AdvancedDiscoverScreen = () => {
                         filterButton3route={() => (console.log("Pined button pressed"))}
                     /> */}
                 </View>
-                <ScrollView>
-                    {/* <View>
-                        <Text style={[mainStyles.headerText, { fontSize: '22', }]}>Group Search</Text>
-                    </View> */}
+                <View>
                     <View>
                         <View style={{ flexDirection: 'row', justifyContent: 'flex-end', paddingHorizontal: 10, }}>
                             <TouchableOpacity
@@ -192,9 +229,9 @@ export const AdvancedDiscoverScreen = () => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                </ScrollView>
+                </View>
                 {/* <GroupHomeHeader /> */}
-            </View>
+            </ScrollView>
             <View style={mainScreenLayoutStyles.navbarContainer}>
                 <NavBar />
             </View>
@@ -232,6 +269,15 @@ const styles = StyleSheet.create({
         // borderBottomWidth: 1,
         // borderBottomColor: "#4D4D4D",
         paddingVertical: 10,
+    },
+    categoryText: {
+        fontWeight: '500',
+        fontSize: 16,
+        paddingHorizontal: 5,
+    },
+    categoryBackground: {
+        backgroundColor: '#D4D4D4',
+        borderRadius: 5,
     },
 })
 

@@ -2,40 +2,59 @@ import React from 'react';
 import { Text, View, Image, StyleSheet, TouchableOpacity, Span } from 'react-native';
 // Navigation
 import { useNavigation } from '@react-navigation/native';
+import { useRoute } from '@react-navigation/native';
 // Styles
 import mainStyles from '../styles/mainStyles';
 
 export const NavBar = () => {
+
     const navigation = useNavigation();
+    const currentRoute = useRoute();
+
+    const navbarActiveScreen = () => {
+        if (currentRoute.name === "Newsfeed") {
+            console.log('Newsfeed Screen')
+        } else {
+            console.log('Not noticing what screen')
+        }
+    };
+
+    // style={isPurchaseClick === true ? styles.goButtonDisableBg : styles.goButtonBg}
+
     return (
         <View style={styles.NavBarContainer}>
             <View>
                 <View style={styles.navbarSafeArea}>
                     {/* Icon Row */}
-                    <View style={mainStyles.row}>
+                    <View style={[mainStyles.row]}>
                         <TouchableOpacity
-                            style={styles.navbarCol}
-                            onPress={() => navigation.navigate('Newsfeed')}
+                            // style={styles.navbarCol}
+                            style={currentRoute.name === "Newsfeed" ? styles.navbarColActive : styles.navbarCol}
+                            onPress={() => navigation.navigate('Newsfeed', console.log(currentRoute), console.log(currentRoute.name), navbarActiveScreen())}
                         >
                             <Image
                                 style={mainStyles.appIcon}
-                                source={require('../../assets/HomeIconBlue.png')}
+                                // source={require('../../assets/HomeIconBlue.png')}
+                                source={currentRoute.name === "Newsfeed" ? require('../../assets/HomeIconBlueFilled.png') : require('../../assets/HomeIconBlue.png')}
                             />
                             {/* <Text style={styles.XStextBlue}>Newsfeed</Text> */}
                         </TouchableOpacity>
                         <TouchableOpacity
-                            style={styles.navbarCol}
-                            onPress={() => navigation.navigate('Discover')}
+                            // style={styles.navbarCol}
+                            style={currentRoute.name === "Discover" || currentRoute.name === "AdvancedDiscover" ? styles.navbarColActive : styles.navbarCol}
+                            onPress={() => navigation.navigate('Discover', console.log(currentRoute))}
                         >
                             <Image
                                 style={mainStyles.appIcon}
-                                source={require('../../assets/DiscoverIconRed.png')}
+                                // source={require('../../assets/DiscoverIconRed.png')}
+                                source={currentRoute.name === "Discover" || currentRoute.name === "AdvancedDiscover" ? require('../../assets/DiscoverIconRedFilled.png') : require('../../assets/DiscoverIconRed.png')}
                             />
                             {/* <Text style={styles.XStextRed}>Discover</Text> */}
                         </TouchableOpacity>
                         <TouchableOpacity
-                            style={[styles.navbarCol, {}]}
-                            onPress={() => navigation.navigate('CreateGroup')}
+                            // style={[styles.navbarCol, {}]}
+                            style={currentRoute.name === "CreateGroup" ? styles.navbarColActive : styles.navbarCol}
+                            onPress={() => navigation.navigate('CreateGroup', console.log(currentRoute))}
                         >
                             <Image
                                 style={mainStyles.appIcon}
@@ -52,20 +71,24 @@ export const NavBar = () => {
                             </Text> */}
                         </TouchableOpacity>
                         <TouchableOpacity
-                            style={styles.navbarCol}
-                            onPress={() => navigation.navigate('MyPages')}>
+                            // style={styles.navbarCol}
+                            style={currentRoute.name === "MyPages" ? styles.navbarColActive : styles.navbarCol}
+                            onPress={() => navigation.navigate('MyPages', console.log(currentRoute))}>
                             <Image
                                 style={mainStyles.appIcon}
-                                source={require('../../assets/BookmarkIconYellow.png')}
+                                // source={require('../../assets/BookmarkIconYellow.png')}
+                                source={currentRoute.name === "MyPages" ? require('../../assets/BookmarkIconYellowFilled.png') : require('../../assets/BookmarkIconYellow.png')}
                             />
                             {/* <Text style={styles.XStextYellow}>My Groups</Text> */}
                         </TouchableOpacity>
                         <TouchableOpacity
-                            style={styles.navbarCol}
-                            onPress={() => navigation.navigate('MyProfile')}>
+                            // style={styles.navbarCol}
+                            style={currentRoute.name === "MyProfile" ? styles.navbarColActive : styles.navbarCol}
+                            onPress={() => navigation.navigate('MyProfile', console.log(currentRoute))}>
                             <Image
                                 style={mainStyles.appIcon}
-                                source={require('../../assets/ProfileIconGreen.png')}
+                                // source={require('../../assets/ProfileIconGreen.png')}
+                                source={currentRoute.name === "MyProfile" ? require('../../assets/ProfileIconGreenFilled.png') : require('../../assets/ProfileIconGreen.png')}
                             />
                             {/* <Text style={styles.XStextGreen}>Profile</Text> */}
                         </TouchableOpacity>
@@ -95,7 +118,7 @@ const styles = StyleSheet.create({
     },
     navbarSafeArea: {
         // padding: 20,
-        paddingHorizontal: 20,
+        paddingHorizontal: 30,
         paddingBottom: 10,
         justifyContent: "center",
         alignItems: 'stretch',
@@ -103,6 +126,14 @@ const styles = StyleSheet.create({
     navbarCol: {
         justifyContent: "center",
         alignItems: "center",
+    },
+    navbarColActive: {
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#d4d4d4",
+        borderRadius: 15,
+        padding: 5,
+        // opacity: .5,
     },
     // NavBar Text
     XStextBlue: {

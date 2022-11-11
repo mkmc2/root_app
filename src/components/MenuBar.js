@@ -11,7 +11,7 @@ export const MenuBar = ({ menuOption1, menuOption2, menuOption3, menuButton1, me
     const [iconPressed, setIconPressed] = useState(true)
 
     return (
-        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', padding: 20, marginTop: 5, }}>
+        <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 10, marginTop: 15, }}>
             <View>
                 <TouchableOpacity
                     style={[styles.backgroundStyle, {}]}
