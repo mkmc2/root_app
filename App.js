@@ -1,6 +1,7 @@
 // In App.js in a new project
 
 import * as React from 'react';
+import { useState } from 'react';
 import { View, Text } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -47,6 +48,9 @@ import { mainHeaderStyle, optionsStylesGeneratorNoBack } from "./src/styles/head
 const Stack = createNativeStackNavigator();
 
 function App() {
+
+  // const [pressedNumber, setPressedNumber] = useState(1)
+
   return (
     <NavigationContainer>
       <Stack.Navigator
@@ -62,6 +66,13 @@ function App() {
           options={mainHeaderStyle('Newsfeed', '#252B68', '#FFFFFF')}
           component={NewsfeedScreen}
         />
+        {/* {(props) =>
+          <NewsfeedScreen
+            pressedNumber={pressedNumber}
+            setPressedNumber={setPressedNumber}
+            {...props}
+          />
+        } */}
         <Stack.Screen
           name="Discover"
           options={mainHeaderStyle('Discover', '#252B68', '#FFFFFF')}
@@ -84,32 +95,39 @@ function App() {
         />
         {/* sub Main Screens; Folder: subScreens */}
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="AdvancedDiscover"
           component={AdvancedDiscoverScreen}
         />
         {/* Group Home Screens; Folder: groupHomeScreens */}
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupPageHome"
           component={GroupHomeScreen}
         />
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupHomeMessages"
           component={GroupHomeMessagesScreen}
         />
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupHomePhotos"
           component={GroupHomePhotosScreen}
         />
         {/* Group Home Sub Screens: groupHomeSubScreens */}
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupHomeSubMessage"
           component={GroupMessageScreen}
         />
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupReplyMessage"
           component={GroupReplyMessageScreen}
         />
         <Stack.Screen
+          options={{ animation: 'none' }}
           name="GroupFullScreen"
           component={GroupHomeFullScreen}
         />

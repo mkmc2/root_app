@@ -30,6 +30,7 @@ export const GroupRow = ({ groupName, groupLocation, groupDate, groupUsername, p
                         <View style={{ flex: 1, }}>
                             <View style={{ flexDirection: 'row', justifyContent: "space-between", }}>
                                 <Text
+                                    numberOfLines={1}
                                     style={{ fontSize: 16, color: "#4D4D4D", fontWeight: 'bold', flexWrap: "wrap", alignSelf: 'center', }}>
                                     {groupUsername}
                                 </Text>
@@ -38,21 +39,21 @@ export const GroupRow = ({ groupName, groupLocation, groupDate, groupUsername, p
                                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
                                     <Image
                                         source={require('../../assets/temporaryAssets/ProfileIconThick.png')}
-                                        style={{ height: 25, width: 25, }}
+                                        style={{ height: 23, width: 23, }}
                                     />
                                     <Text style={styles.iconSubText}>{groupNumberOfUsers}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
                                     <Image
                                         source={require('../../assets/temporaryAssets/messageIconFontAwesome.png')}
-                                        style={{ height: 25, width: 25, }}
+                                        style={{ height: 20, width: 20, }}
                                     />
                                     <Text style={styles.iconSubText}>{groupNumberOfMessageChains}</Text>
                                 </View>
                                 <View style={{ flexDirection: 'row', alignItems: 'center', paddingRight: 12, }}>
                                     <Image
                                         source={require('../../assets/icons/photoIconOutline.png')}
-                                        style={{ height: 25, width: 25, }}
+                                        style={{ height: 20, width: 20, }}
                                     />
                                     <Text style={styles.iconSubText}>{groupNumberOfMessagePhotos}</Text>
                                 </View>
@@ -117,6 +118,7 @@ const styles = StyleSheet.create({
     entryRow: {
         // backgroundColor: "red",
         flex: 7,
+        paddingHorizontal: 10,
     },
     entryIconView: {
         // backgroundColor: "pink",
@@ -149,7 +151,7 @@ const styles = StyleSheet.create({
         width: 65,
     },
     iconSubText: {
-        fontSize: 14,
+        fontSize: 13,
         color: "#4D4D4D",
         fontWeight: 'bold',
         paddingLeft: 2,

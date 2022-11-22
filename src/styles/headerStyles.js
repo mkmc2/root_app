@@ -13,7 +13,7 @@ export const mainHeaderStyle = (title, headerTintColor, backgroundColor) => () =
         fontSize: 18,
     },
     animation: 'none',
-    headerBackVisible: false,
+    headerBackVisible: true,
     // headerRight: () => (
     //     <TouchableOpacity>
     //         <Image

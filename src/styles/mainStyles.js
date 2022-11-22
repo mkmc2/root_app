@@ -161,6 +161,24 @@ const mainStyles = StyleSheet.create({
         paddingHorizontal: 10,
         marginTop: 10,
     },
+    // Button Styling
+    backgroundStyle: {
+        backgroundColor: '#F1F1F1',
+        width: 100,
+        borderRadius: 5,
+    },
+    pressedButton: {
+        backgroundColor: '#4D4D4D',
+        color: '#F1F1F1',
+        width: 100,
+        borderRadius: 5,
+        opacity: .5,
+    },
+    subTextPressed: {
+        fontSize: 16,
+        fontWeight: 'bold',
+        color: "#F5F5F5",
+    },
 })
 
 export default mainStyles;

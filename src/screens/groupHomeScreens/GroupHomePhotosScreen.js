@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, StyleSheet, ScrollView, } from 'react-native';
+import { Text, View, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import Header from '../../components/Header';
 import NavBar from '../../components/NavBar';
@@ -32,14 +32,34 @@ export const GroupHomePhotosScreen = () => {
             <ScrollView style={groupHomePageStyling.mainContainer}>
                 <View>
                     {/* <IconMenuBar /> */}
-                    <MenuBar
+                    {/* <MenuBar
                         menuOption1="Newsfeed"
                         menuOption2="Messages"
                         menuOption3="Photos"
                         menuButton1={() => navigation.navigate('GroupPageHome', console.log("Newsfeed button pressed"))}
                         menuButton2={() => navigation.navigate('GroupHomeMessages', console.log("Messages button pressed"))}
                         menuButton3={() => navigation.navigate('GroupHomePhotos', console.log("Photos button pressed"))}
-                    />
+                    /> */}
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-around', alignItems: 'center', paddingHorizontal: 20, paddingVertical: 10, marginTop: 15, }}>
+                        <TouchableOpacity
+                            style={[mainStyles.backgroundStyle, {}]}
+                            onPress={() => navigation.navigate('GroupPageHome', console.log("Newsfeed button pressed"))}
+                        >
+                            <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>Newsfeed</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={mainStyles.backgroundStyle}
+                            onPress={() => navigation.navigate('GroupHomeMessages', console.log("Messages button pressed"))}
+                        >
+                            <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>Messages</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={mainStyles.pressedButton}
+                            onPress={() => navigation.navigate('GroupHomePhotos', console.log("Photos button pressed"))}
+                        >
+                            <Text style={[mainStyles.subTextPressed, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, }]}>Photos</Text>
+                        </TouchableOpacity>
+                    </View>
                     <FilterMenu
                         filterButton1="Recent"
                         filterButton2="Popular"

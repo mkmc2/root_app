@@ -53,7 +53,14 @@ export const NavBar = () => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             // style={[styles.navbarCol, {}]}
-                            style={currentRoute.name === "CreateGroup" ? styles.navbarColActive : styles.navbarCol}
+                            style={
+                                currentRoute.name === "CreateGroup" ||
+                                    currentRoute.name === "GroupHome" ||
+                                    currentRoute.name === "GroupShortname" ||
+                                    currentRoute.name === "CreateGroupImage" ||
+                                    currentRoute.name === "GrowNewGroupContent" ||
+                                    currentRoute.name === "GroupTags" ?
+                                    styles.navbarColActive : styles.navbarCol}
                             onPress={() => navigation.navigate('CreateGroup', console.log(currentRoute))}
                         >
                             <Image
@@ -72,12 +79,28 @@ export const NavBar = () => {
                         </TouchableOpacity>
                         <TouchableOpacity
                             // style={styles.navbarCol}
-                            style={currentRoute.name === "MyPages" ? styles.navbarColActive : styles.navbarCol}
+                            style={
+                                currentRoute.name === "MyPages" ||
+                                    currentRoute.name === "GroupPageHome" ||
+                                    currentRoute.name === "GroupHomeMessages" ||
+                                    currentRoute.name === "GroupHomePhotos" ||
+                                    currentRoute.name === "GroupHomeSubMessage" ||
+                                    currentRoute.name === "GroupReplyMessage" ||
+                                    currentRoute.name === "GroupFullScreen" ?
+                                    styles.navbarColActive : styles.navbarCol}
                             onPress={() => navigation.navigate('MyPages', console.log(currentRoute))}>
                             <Image
                                 style={mainStyles.appIcon}
                                 // source={require('../../assets/BookmarkIconYellow.png')}
-                                source={currentRoute.name === "MyPages" ? require('../../assets/BookmarkIconYellowFilled.png') : require('../../assets/BookmarkIconYellow.png')}
+                                source={
+                                    currentRoute.name === "MyPages" ||
+                                        currentRoute.name === "GroupPageHome" ||
+                                        currentRoute.name === "GroupHomeMessages" ||
+                                        currentRoute.name === "GroupHomePhotos" ||
+                                        currentRoute.name === "GroupHomeSubMessage" ||
+                                        currentRoute.name === "GroupReplyMessage" ||
+                                        currentRoute.name === "GroupFullScreen" ?
+                                        require('../../assets/BookmarkIconYellowFilled.png') : require('../../assets/BookmarkIconYellow.png')}
                             />
                             {/* <Text style={styles.XStextYellow}>My Groups</Text> */}
                         </TouchableOpacity>
@@ -126,11 +149,12 @@ const styles = StyleSheet.create({
     navbarCol: {
         justifyContent: "center",
         alignItems: "center",
+        padding: 5,
     },
     navbarColActive: {
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#d4d4d4",
+        backgroundColor: "#e5e5e5",
         borderRadius: 15,
         padding: 5,
         // opacity: .5,
