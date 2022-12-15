@@ -261,7 +261,7 @@ export const MyProfileScreen = () => {
                                         userName='Julia Charters'
                                         totalUsersInThread=""
                                         titleOfMessageHeader='Forest Villa Book Club'
-                                        latestMessage="You're welcome Leslie! We are excited for you to join our book club. Reminder the first meeting is Thursday at 5 PM"
+                                        latestMessage="You're welcome Leslie! We are excited for you to join our book club. Reminder, the first meeting is Thursday at 5 PM"
                                         postTime='12/08/22'
                                         icon={<MaterialIcons name="bookmark-outline" size={28} color="#EA594C" />}
                                         openThread={alert2ButtonPressed}
