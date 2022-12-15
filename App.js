@@ -50,6 +50,11 @@ const Stack = createNativeStackNavigator();
 function App() {
 
   // const [pressedNumber, setPressedNumber] = useState(1)
+  const [openSearchBar, setOpenSearchBar] = useState(false);
+
+  const openSearchBarFunction = () => {
+    setOpenSearchBar(true);
+  }
 
   return (
     <NavigationContainer>
@@ -66,13 +71,16 @@ function App() {
           options={mainHeaderStyle('Newsfeed', '#252B68', '#FFFFFF')}
           component={NewsfeedScreen}
         />
-        {/* {(props) =>
+        {(props) =>
           <NewsfeedScreen
             pressedNumber={pressedNumber}
             setPressedNumber={setPressedNumber}
+            openSearchBar={openSearchBar}
+            setOpenSearchBar={setOpenSearchBar}
+            openSearchBarFunction={openSearchBarFunction}
             {...props}
           />
-        } */}
+        }
         <Stack.Screen
           name="Discover"
           options={mainHeaderStyle('Discover', '#252B68', '#FFFFFF')}

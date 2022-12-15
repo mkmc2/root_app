@@ -6,7 +6,7 @@ import { useNavigation } from '@react-navigation/native';
 import mainStyles from '../styles/mainStyles';
 import { FontAwesome5 } from '@expo/vector-icons';
 
-export const Header = ({ HeaderTitle, icon }) => {
+export const Header = ({ HeaderTitle, icon, onPress, openSearchBar, setOpenSearchBar, openSearchBarFunction }) => {
 
     const navigation = useNavigation();
     const [showSearchBar, setShowSearchBar] = useState(false)
@@ -18,7 +18,10 @@ export const Header = ({ HeaderTitle, icon }) => {
                 <TouchableOpacity
                     // below will be a link to a search bar modal that will expand on the current screen within the header
                     // onPress={() => navigation.navigate('Login')}>
-                    onPress={() => setShowSearchBar(!showSearchBar)}>
+                    onPress={() => setShowSearchBar(!showSearchBar)}
+                // onPress={() => setOpenSearchBar(!openSearchBar)}
+                // onPress={() => openSearchBarFunction()}
+                >
                     {/* <Image
                         source={require('../../assets/SearchIcon.png')}
                         style={mainStyles.appIcon}
@@ -28,14 +31,15 @@ export const Header = ({ HeaderTitle, icon }) => {
                     </View>
                 </TouchableOpacity>
             </View>
-            {showSearchBar ?
-                (
-                    <View style={{}}>
-                        <Text>Opens a search bar</Text>
-                    </View>
-                ) : null
+            {
+                showSearchBar ?
+                    (
+                        <View style={{}}>
+                            <Text>Opens a search bar</Text>
+                        </View>
+                    ) : null
             }
-        </View>
+        </View >
     )
 };
 

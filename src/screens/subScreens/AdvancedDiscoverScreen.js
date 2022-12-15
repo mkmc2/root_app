@@ -48,7 +48,7 @@ export const AdvancedDiscoverScreen = () => {
                         <Text style={[mainStyles.mainBlue, { fontWeight: '700', fontSize: '16', }]}>Group Search</Text>
                     </TouchableOpacity>
                 </View> */}
-                <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', }]}>
+                <View style={[styles.groupRowView, { backgroundColor: '#FFFFFF', marginHorizontal: -10, }]}>
                     {/* <View style={{ padding: 0, }}>
                         <View style={[styles.searchContainer, {}]}>
                             <Text style={[mainStyles.mdGrayText, {}]}>Categories</Text>

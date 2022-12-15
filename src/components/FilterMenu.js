@@ -38,7 +38,7 @@ export const FilterMenu = ({ filterButton1, filterButton2, filterButton3, filter
 
 const styles = StyleSheet.create({
     backgroundStyle: {
-        backgroundColor: '#FFFFFF',
+        // backgroundColor: '#FFFFFF',
         // width: 100,
         // borderRadius: 5
 

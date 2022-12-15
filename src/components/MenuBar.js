@@ -27,14 +27,14 @@ export const MenuBar = ({ menuOption1, menuOption2, menuOption3, menuButton1, me
                 style={styles.backgroundStyle}
                 onPress={menuButton2}
             >
-                <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, opacity: .5 }]}>{menuOption2}</Text>
+                <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, opacity: 1 }]}>{menuOption2}</Text>
             </TouchableOpacity>
             <TouchableOpacity
                 disabled={true}
                 style={styles.backgroundStyle}
                 onPress={menuButton3}
             >
-                <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, opacity: .5 }]}>{menuOption3}</Text>
+                <Text style={[mainStyles.subTextGray, { paddingVertical: 5, paddingHorizontal: 10, alignSelf: 'center', fontSize: 14, opacity: 1 }]}>{menuOption3}</Text>
             </TouchableOpacity>
         </View>
     )

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, StyleSheet, SafeAreaView, ScrollView, Image } from 'react-native';
+import { Text, View, StyleSheet, SafeAreaView, ScrollView, Image, TouchableWithoutFeedback, Keyboard, TextInput } from 'react-native';
 import Header from '../components/Header';
 import NavBar from '../components/NavBar';
 import NewsfeedEntry from '../components/NewsfeedEntry';
@@ -8,9 +8,10 @@ import { FontAwesome } from '@expo/vector-icons';
 // Styling
 import mainStyles from '../styles/mainStyles';
 import mainScreenLayoutStyles from '../styles/mainScreenLayoutStyle';
-import groupRowStyling from '../styles/groupRowStyling';
+import groupRowStyling from '../styles/groupRowStyling'
+import signinStyles from '../styles/signinStyles';
 
-export const NewsfeedScreen = ({ showSearchBar }) => {
+export const NewsfeedScreen = ({ showSearchBar, openSearchBar, setOpenSearchBar, openSearchBarFunction }) => {
     return (
         <View style={mainStyles.container}>
             {/* HEADER */}
@@ -21,6 +22,42 @@ export const NewsfeedScreen = ({ showSearchBar }) => {
                 />
             </View>
             <ScrollView style={mainScreenLayoutStyles.mainContainer}>
+                {/* <View>
+                    <TouchableWithoutFeedback
+                        style={styles.searchContainer}
+                        onPress={Keyboard.dismiss}
+                    >
+                        <View style={styles.backgroundStyle}>
+                            <TextInput
+                                autoCapitalize="none"
+                                autoCorrect={false}
+                                style={[signinStyles.loginText, { fontSize: 18, paddingVertical: 7, }]}
+                                placeholder="Search..."
+                            // onChangeText={onTermChange} <- shortening code
+                            // onEndEditing={onTermSubmit} <- shortening code
+                            />
+                        </View>
+                    </TouchableWithoutFeedback>
+                </View> */}
+                {openSearchBar ?
+                    (
+                        <TouchableWithoutFeedback
+                            style={styles.searchContainer}
+                            onPress={Keyboard.dismiss}
+                        >
+                            <View style={styles.backgroundStyle}>
+                                <TextInput
+                                    autoCapitalize="none"
+                                    autoCorrect={false}
+                                    style={[signinStyles.loginText, { fontSize: 18, paddingVertical: 7, }]}
+                                    placeholder="Search..."
+                                // onChangeText={onTermChange} <- shortening code
+                                // onEndEditing={onTermSubmit} <- shortening code
+                                />
+                            </View>
+                        </TouchableWithoutFeedback>
+                    ) : null
+                }
                 <MenuBar
                     menuOption1="My Groups"
                     menuOption2="Popular"
